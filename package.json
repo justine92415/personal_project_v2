@@ -1,0 +1,15 @@
+{
+  "name": "personal_project-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lazeLoading.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mobile-drag-drop": "^3.0.0-beta.0"
+  }
+}

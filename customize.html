@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/grid.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/3242a2ffdc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script type="module" defer src="./test.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="row navbar">
+                <div class="col-3">
+                    <div class="logo-box">
+                        <a href="index.html">
+                            <img src="assets/LOGO.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul class="nav-group">
+                        <li class="nav-item">
+                            <a href="products.html" data-en="Products">
+                                <span class="show1">產品一覽</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customize.html" data-en="Customize">
+                                <span class="show1">客製禮盒</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" data-en="AboutUs">
+                                <span class="show1">關於我們</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" data-en="News">
+                                <span class="show1">最新資訊</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="faq.html" data-en="FAQ">
+                                <span class="show1">訂購須知</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="icon-group">
+                        <a href="#" class="icon-item icon-item--cart">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a>
+
+                        <a href="#" class="icon-item icon-item--user">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="products-banner">
+                        <div class="banner-img customize-banner">
+                            <h2 class="banner-header">客製化禮盒</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-breadcrumbs">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item">
+                        <a href="#">首頁</a>
+                    </li>
+
+                    <li class="breadcrumbs-item">
+                        <a href="#">客製禮盒</a>
+                    </li>
+                </ol>
+            </div>
+
+
+            <div class="row customize-row">
+                <div class="col-6 customize-col">
+                    <!-- <div class="customize-box grid22">
+                        <div class="row">
+                            <div class="col-6 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-6 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-6 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-6 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="customize-box grid33">
+                        <div class="row">
+                            <div class="col-4 customize-item">
+                                <div class="dropbox 1" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-4 customize-item">
+                                <div class="dropbox 2" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-4 customize-item">
+                                <div class="dropbox 3">
+                                </div>
+                            </div>
+                            <div class=" col-4 customize-item">
+                                <div class="dropbox 4" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-4 customize-item">
+                                <div class="dropbox 5" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-4 customize-item">
+                                <div class="dropbox 6" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-4 customize-item">
+                                <div class="dropbox 7" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-4 customize-item">
+                                <div class="dropbox 8" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-4 customize-item">
+                                <div class="dropbox 9" droppable=true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="customize-box grid44">
+                        <div class="row">
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                            <div class="col-3 customize-item">
+                                <div class="dropbox" droppable=true">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="cover">
+                        <img src="./assets/LOGO.png" alt="">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="customize-tt">
+                        <div class="customize-size">
+                            <p>1.選擇尺寸</p>
+                            <div class="size-box">
+                                <div class="row size-row">
+                                    <div class="col-4">
+                                        <div class="size-item item-active">
+                                            2x2
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="size-item">
+                                            3x3
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="size-item">
+                                            4x4
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-color">
+                            <p>2.選擇顏色</p>
+
+                            <div class="color-box">
+                                <div class="row color-row">
+                                    <div class="col-3 color-col">
+                                        <div class="color-item">
+                                            <div class="colorblock block-blue"></div>
+                                            藍色
+                                        </div>
+                                    </div>
+                                    <div class="col-3 color-col">
+                                        <div class="color-item">
+                                            <div class="colorblock block-green"></div>
+                                            綠色
+                                        </div>
+                                    </div>
+                                    <div class="col-3 color-col">
+                                        <div class="color-item">
+                                            <div class="colorblock block-red"></div>
+                                            紅色
+                                        </div>
+                                    </div>
+                                    <div class="col-3 color-col">
+                                        <div class="color-item item-active">
+                                            <div class="colorblock block-grown"></div>
+                                            棕色
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="customize-choco">
+                            <p>3.選擇巧克力</p>
+
+
+                            <div class="choco-box">
+                                <h2>店長推薦</h2>
+                                <div class="row choco-row">
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">茉橙</p>
+                                            <div class="choco-img test" draggable="true" data-price="30">
+                                                <img draggable="false" src="./assets/nakamara/Jasmine.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.30</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">椰子</p>
+                                            <div class="choco-img" draggable="true" data-price="40">
+                                                <img draggable="false" src="./assets/nakamara/Coconut.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.40</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">榛果</p>
+                                            <div class="choco-img" draggable="true" data-price="55">
+                                                <img draggable="false" src="./assets/nakamara/Honey.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.55</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">白松露</p>
+                                            <div class="choco-img" draggable="true" data-price="50">
+                                                <img draggable="false" src="./assets/nakamara/WhiteTruffle.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">開心果</p>
+                                            <div class="choco-img" draggable="true" data-price="60">
+                                                <img draggable="false" src="./assets/nakamara/Pistachio.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.60</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">草莓</p>
+                                            <div class="choco-img" draggable="true" data-price="60">
+                                                <img draggable="false" src="./assets/nakamara/Strawberry.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.60</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">焦糖</p>
+                                            <div class="choco-img" draggable="true" data-price="50">
+                                                <img draggable="false" src="./assets/nakamara/Salted.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">漿果</p>
+                                            <div class="choco-img" draggable="true" data-price="60">
+                                                <img draggable="false" src="./assets/nakamara/Wood.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.60</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">咖啡</p>
+                                            <div class="choco-img" draggable="true" data-price="30">
+                                                <img draggable="false" src="./assets/nakamara/TripleEspresso.png"
+                                                    alt="">
+                                            </div>
+                                            <p class="choco-price">NT.30</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">櫻花</p>
+                                            <div class="choco-img" draggable="true" data-price="45">
+                                                <img draggable="false" src="./assets/nakamara/CherryBlossom.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.45</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="choco-box">
+                                <h2>熱賣單品</h2>
+                                <div class="row choco-row">
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">草莓</p>
+                                            <div class="choco-img" draggable="true" data-price="35">
+                                                <img draggable="false" src="./assets/nakamara/GreenTea.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.35</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">焦糖</p>
+                                            <div class="choco-img" draggable="true" data-price="45">
+                                                <img draggable="false" src="./assets/nakamara/Golden.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.45</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">血玫瑰</p>
+                                            <div class="choco-img" draggable="true" data-price="55">
+                                                <img draggable="false" src="./assets/nakamara/ScarletRose.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.55</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">榛果</p>
+                                            <div class="choco-img" draggable="true" data-price="40">
+                                                <img draggable="false" src="./assets/nakamara/Hazelnut.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.40</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">白芝麻</p>
+                                            <div class="choco-img" draggable="true" data-price="50">
+                                                <img draggable="false" src="./assets/nakamara/White.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">柚子</p>
+                                            <div class="choco-img" draggable="true" data-price="60">
+                                                <img draggable="false" src="./assets/nakamara/Yuzu.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.60</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">甘納許</p>
+                                            <div class="choco-img" draggable="true" data-price="40">
+                                                <img draggable="false" src="./assets/nakamara/Classic.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.40</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="choco-box">
+                                <h2>經典系列</h2>
+                                <div class="row choco-row">
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">堅果</p>
+                                            <div class="choco-img" draggable="true" data-price="40">
+                                                <img draggable="false" src="./assets/nakamara/RoastedWattleSeed.png"
+                                                    alt="">
+                                            </div>
+                                            <p class="choco-price">NT.40</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">芒果</p>
+                                            <div class="choco-img" draggable="true" data-price="90">
+                                                <img draggable="false" src="./assets/nakamara/ForestMint.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.90</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">血桃</p>
+                                            <div class="choco-img" draggable="true" data-price="70">
+                                                <img draggable="false" src="./assets/nakamara/Quandong.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.70</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">五香橙</p>
+                                            <div class="choco-img" draggable="true" data-price="50">
+                                                <img draggable="false" src="./assets/nakamara/Riberry.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">花蜂蜜</p>
+                                            <div class="choco-img" draggable="true" data-price="40">
+                                                <img draggable="false" src="./assets/nakamara/Rosemary.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.40</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">鹽焦糖</p>
+                                            <div class="choco-img" draggable="true" data-price="45">
+                                                <img draggable="false" src="./assets/nakamara/MurraRiverPinkSalt.png"
+                                                    alt="">
+                                            </div>
+                                            <p class="choco-price">NT.45</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">栗子</p>
+                                            <div class="choco-img" draggable="true" data-price="60">
+                                                <img draggable="false" src="./assets/nakamara/Davidsonplum.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.60</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="choco-item">
+                                            <p class="choco-name">檸檬</p>
+                                            <div class="choco-img" draggable="true" data-price="55">
+                                                <img draggable="false" src="./assets/nakamara/LemonMyrtle.png" alt="">
+                                            </div>
+                                            <p class="choco-price">NT.55</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customize-messagebox">
+                        <label class="customize-message" for="message">填寫文字<span>(選填)</span></label>
+                        <textarea class="msgarea" name="message" id="message" cols="20" rows="5"
+                            placeholder="在此輸入您的留言"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="customize-total">
+                                總計:
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="customize-btns">
+                                <div class="customize-reset">
+                                    重置禮盒
+                                </div>
+                                <div class="customize-tocart">
+                                    加到購物車
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container test">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="footer-nav">
+                        <a href="products.html">產品一覽</a>
+                        <a href="customize.html">客製禮盒</a>
+                        <a href="about.html">關於我們</a>
+                        <a href="news.html">最新資訊</a>
+                        <a href="faq.html">訂購須知</a>
+                    </nav>
+                </div>
+
+                <div class="col-12">
+                    <ul class="footer-information">
+                        <li class="footer-tel">
+                            <ion-icon class="footer-icon" name="call-outline"></ion-icon>
+                            <span class="ftest">03-425-1108</span>
+                        </li>
+                        <li class="footer-address">
+                            <ion-icon class="footer-icon" name="location-outline"></ion-icon>
+                            <span class="ftest">320桃園市中壢區復興路46號9樓</span>
+                        </li>
+                        <li class="footer-mail">
+                            <ion-icon class="footer-icon" name="mail-outline"></ion-icon>
+                            <span class="ftest">27Chocolate@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <div class="footer-ohter">
+                        <p footer-other>本網站為緯育TibaMe前端設計工程師班學員專題作品，本平台僅供學習、展示之用。</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,1994 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Saira Condensed", "sans-serif", "微軟正黑體";
+    /* font-family: sans-serif, "微軟正黑體"; */
+    background-color: #f6f6f6;
+    overflow-x: hidden;
+}
+
+/* ***navbar*** */
+
+header {
+    background-color: #e2cebc;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+
+    top: 0;
+    left: 0;
+
+    z-index: 99;
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo-box {
+    padding: 1rem;
+}
+
+.logo-box img {
+    width: 11rem;
+    height: 4.2rem;
+}
+
+.nav-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item a {
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+}
+
+.nav-item a:link,
+.nav-item a:visited {
+    color: #443311;
+}
+
+.nav-item a:hover .show1 {
+    visibility: hidden;
+}
+
+.nav-item a::before {
+    content: attr(data-en);
+    position: absolute;
+    bottom: -0.8rem;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+.nav-item a::after {
+    content: "";
+
+    width: 100%;
+
+    background-color: black;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.nav-item a:hover::before {
+    top: 0%;
+    transition: all 0.4s linear;
+    visibility: visible;
+}
+.nav-item a:hover::after {
+    opacity: 1;
+    height: 0.2rem;
+    transition: all 0.3s linear;
+}
+
+.icon-group {
+    display: flex;
+    justify-content: end;
+}
+
+.icon-item {
+    padding: 0 1.5rem;
+    font-size: 3rem;
+    opacity: 0.3;
+}
+
+.icon-item:link,
+.icon-item:visited {
+    color: #443311;
+}
+
+.icon-item:hover,
+.icon-item:active {
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+
+/* **************************** */
+
+main {
+    margin-bottom: 20rem;
+}
+
+.section-banner {
+    padding-top: 15rem;
+    margin-bottom: 30rem;
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.banner__content {
+    font-size: 4.8rem;
+    color: #443311;
+    padding: 0 10rem;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    z-index: 1;
+
+    background-color: #f5f5f590;
+    border-radius: 0.5rem;
+}
+
+.heading-main {
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.banner__content .heading-sub {
+    display: block;
+    margin-top: 1rem;
+}
+.banner__slider {
+    width: 75%;
+    max-width: 1200px;
+    position: relative;
+}
+.banner__slider img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.banner__slider .slider-dots {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-dots .dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    margin: 0 1rem;
+
+    background-color: #aaa;
+}
+
+.slider-dots .dot-active {
+    background-color: #443311;
+}
+
+.geometry {
+    position: absolute;
+    opacity: 0.3;
+    vertical-align: top;
+    width: 30rem;
+    height: 30rem;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.geometry img {
+    width: 100%;
+}
+
+.geometry-square {
+    top: -15%;
+    left: 10%;
+}
+.geometry-circle {
+    bottom: -30%;
+    left: 10%;
+}
+.geometry-triangle {
+    bottom: -35%;
+    right: -10%;
+}
+
+/* ************ */
+
+.middle {
+    width: 100%;
+    height: 20rem;
+    background-color: #e2cebc;
+    position: relative;
+    margin-bottom: 20rem;
+}
+
+.middle::before,
+.middle::after {
+    content: "";
+    width: 100%;
+    height: 6.5vw;
+    position: absolute;
+    z-index: 1;
+}
+
+.middle-products::before {
+    background: url(../assets/Untitled/products_top.png) no-repeat center/100%
+        auto;
+    top: -6.1vw;
+}
+
+.middle-products::after {
+    background: url(../assets/Untitled/products_bottom.png) no-repeat
+        center/100% auto;
+    bottom: -6.1vw;
+}
+
+.middle__title {
+    font-size: 4.6rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.middle__title::before,
+.middle__title::after {
+    content: "";
+    width: 10rem;
+    height: 2.5rem;
+    background-size: 100% auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.middle__title::before {
+    background: url(../assets/Untitled/title_left.png) no-repeat;
+    left: -75%;
+}
+
+.middle__title::after {
+    background: url(../assets/Untitled/title_right.png) no-repeat;
+    right: -75%;
+}
+
+.product-pics {
+    margin: auto;
+    position: relative;
+    width: 27.5rem;
+    height: 35rem;
+}
+
+.product-pics img {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.product-pics::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    background: url(../assets/choco/bonbon_card2.jpg) no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: rotate(-15deg);
+    z-index: 0;
+}
+.product-pics::after {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    background: url(../assets/choco/bonbon_card3.jpg) no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: rotate(15deg);
+    z-index: 0;
+}
+.raw-pics::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    background: url(../assets/choco/raw_card2.jpg) no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: rotate(-15deg);
+    z-index: 0;
+}
+.raw-pics::after {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+    background: url(../assets/choco/raw_card3.jpg) no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: rotate(15deg);
+    z-index: 0;
+}
+
+.product-category h3 {
+    text-align: center;
+    font-size: 3.8rem;
+    margin-bottom: 2rem;
+    color: #443311;
+}
+
+.product-description {
+    font-size: 3rem;
+    color: #443311;
+    line-height: 2;
+}
+
+/* ************** */
+
+.card-container {
+    margin: 3rem 0;
+}
+
+.products-container {
+    margin-bottom: 20rem;
+    position: relative;
+}
+
+.products-bonbon .geometry-circle {
+    top: 5%;
+    left: 25%;
+}
+.products-bonbon .geometry-triangle {
+    top: 45%;
+    right: -10%;
+}
+
+.products-raw .geometry-triangle {
+    bottom: -10%;
+    right: 10%;
+}
+
+.products-raw .geometry-square {
+    top: -25%;
+    left: -15%;
+}
+
+.products-raw .geometry-circle {
+    top: 25%;
+    left: 20%;
+}
+
+.row__reverse {
+    flex-direction: row-reverse;
+}
+
+.card-box {
+    display: flex;
+    justify-content: center;
+}
+
+.product-img {
+    position: relative;
+}
+
+.product-img img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    vertical-align: top;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.hovershow {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: 0.8s ease;
+    overflow: hidden;
+    opacity: 0;
+    background-color: #333333aa;
+    bottom: 0;
+    height: 0;
+}
+
+.product-card:hover .hovershow {
+    height: 100%;
+    opacity: 1;
+}
+
+.hovershow__name,
+.hovershow__price {
+    color: #f6f6f6;
+    font-size: 2.4rem;
+    margin: 1rem auto;
+}
+
+.hovershow__div {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    height: 0.1rem;
+    background-color: #f6f6f6;
+}
+
+.hovershow__description {
+    color: #f6f6f6;
+    padding: 1rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.hovershow__carts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.hovershow__carts .carts__num {
+    width: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #333333aa;
+    border: none;
+
+    color: #e3c5a2;
+}
+
+.carts__num:focus {
+    outline: 1px solid #e3c5a2;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.hovershow__carts .carts__btn {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #e3c5a2;
+
+    display: flex;
+    align-items: center;
+}
+
+.product-content {
+    padding: 10px;
+    color: #f6f6f6;
+    background-color: #b18f6e;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    text-align: center;
+}
+
+.viewlink {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border: 0.2rem solid #f6f6f6;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.viewlink a {
+    color: #f6f6f6;
+    text-decoration: none;
+    font-size: 2.2rem;
+}
+
+.product-card:hover .product-name,
+.product-card:hover .product-price {
+    visibility: hidden;
+}
+.product-card:hover .viewlink {
+    opacity: 1;
+}
+
+.product-name {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.product-price {
+    font-size: 2.2rem;
+}
+
+.more {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.more a {
+    display: inline-block;
+    background-color: #f4ece5;
+    color: #443311;
+    text-decoration: none;
+    font-size: 2.8rem;
+    padding: 1.5rem 2.5rem;
+    border: 2px solid #443311;
+    border-radius: 1rem;
+}
+
+.more a:hover {
+    transition: all 0.3s linear;
+    background-color: #443311;
+    color: #f6f6f6;
+
+    border: 2px solid #f6f6f6;
+}
+
+/* *********************** */
+
+.middle-aboutus::before {
+    background: url(../assets/Untitled/aboutus_top.png) no-repeat center/100%
+        auto;
+    top: -6.1vw;
+}
+
+.middle-aboutus::after {
+    background: url(../assets/Untitled/aboutus_bottom.png) no-repeat center/100%
+        auto;
+    bottom: -6.1vw;
+}
+
+.polys-row {
+    display: flex;
+    justify-content: center;
+}
+
+.polys {
+    width: 100%;
+    height: 75vw;
+    position: relative;
+}
+
+.polys .a {
+    width: 40%;
+    height: 25%;
+
+    text-decoration: none;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    background-color: #443311;
+    background: url(../assets/choco/draw.png) no-repeat center / cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+
+    opacity: 1;
+
+    /* animation: poly-a 2s linear 0s forwards; */
+}
+
+.polys .a-content {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 23%;
+    left: 5%;
+    transform: rotate(10deg);
+    z-index: 1;
+}
+
+@keyframes poly-a {
+    0% {
+        top: 5%;
+        opacity: 0;
+    }
+    50% {
+        top: 0%;
+        opacity: 0.5;
+    }
+    100% {
+        top: -5%;
+        opacity: 1;
+    }
+}
+
+.polys .b {
+    width: 40%;
+    height: 25%;
+
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    background-color: #443311;
+    background: url(../assets/choco/story4.png) no-repeat center / cover;
+    clip-path: polygon(100% 25%, 100% 60%, 0% 100%, 0% 0%);
+
+    /* animation: poly-b 10s linear 0s infinite backwards; */
+}
+
+.polys .b-content {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30%;
+    right: 2.5%;
+    transform: rotate(-20deg);
+    z-index: 1;
+}
+
+@keyframes poly-b {
+    0% {
+        clip-path: polygon(100% 50%, 100% 50%, 0% 100%, 0% 0%);
+    }
+    50% {
+        /* clip-path: polygon(100% 50%, 100% 50%, 35% 100%, 20% 30%) */
+        clip-path: polygon(100% 40%, 100% 55%, 0% 95%, 5% 5%);
+    }
+    100% {
+        clip-path: polygon(100% 50%, 100% 50%, 0% 100%, 0% 0%);
+    }
+}
+
+.polys .c {
+    width: 40%;
+    height: 35%;
+
+    position: absolute;
+    top: 0%;
+    right: -5%;
+    background-color: #443311;
+    background: url(../assets/choco/story2.png) no-repeat center / cover;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    /* animation: poly-c 10s linear 0s infinite backwards; */
+}
+
+.polys .d {
+    width: 100%;
+    height: 50%;
+
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    background-color: #443311;
+
+    background: url(../assets/choco/story6.png) no-repeat center / cover;
+    clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 50%);
+
+    opacity: 0;
+
+    animation: poly-d 1.5s linear 0s forwards;
+}
+
+@keyframes poly-d {
+    0% {
+        opacity: 0;
+        top: 55%;
+    }
+    50% {
+        opacity: 0.5;
+        top: 45%;
+    }
+    100% {
+        opacity: 1;
+        top: 35%;
+    }
+}
+
+.polys .e {
+    width: 100%;
+    height: 50%;
+
+    display: block;
+
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    background-color: #443311;
+
+    background: url(../assets/choco/story5_2.jpg) no-repeat bottom / cover;
+
+    clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+
+    /* animation: poly-e 10s linear 0s infinite backwards; */
+}
+
+@keyframes poly-e {
+    0% {
+        clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+    }
+    50% {
+        /* clip-path: polygon(100% 5%, 95% 50%, 0% 95%, 0% 55%); */
+        clip-path: polygon(100% 55%, 0 95%, 95% 95%);
+    }
+    100% {
+        clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+    }
+}
+
+.aboutus-contetnt {
+    width: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+
+    padding: 2rem;
+
+    font-size: 2.2rem;
+
+    background-color: #eddecc80;
+
+    line-height: 1.5;
+
+    color: #443311;
+
+    border-radius: 2rem;
+}
+
+.abouts-description {
+    margin-bottom: 5rem;
+}
+
+/* *********************** */
+
+.section-feedback {
+    margin-bottom: 20rem;
+}
+
+.feedback-container {
+    padding: 0 4.5rem;
+    position: relative;
+}
+
+.middle-feedback::before {
+    background: url(../assets/Untitled/feedback_top.png) no-repeat center/100%
+        auto;
+    top: -6.1vw;
+}
+
+.middle-feedback::after {
+    background: url(../assets/Untitled/feedback_bottom.png) no-repeat
+        center/100% auto;
+    bottom: -6.1vw;
+}
+
+.feedback-card {
+    background-color: #f4ece5;
+
+    position: relative;
+    border-radius: 10% 10% 5% 5%;
+    margin: 0 1.5rem;
+}
+
+.feedback-user {
+    position: absolute;
+
+    top: -2vw;
+    left: -2vw;
+}
+
+.feedback-user img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.user-img {
+    width: 7.5vw;
+    height: 7.5vw;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.feedback-img {
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.feedback-img img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    vertical-align: top;
+}
+
+.feedback-content {
+    font-size: 2rem;
+    padding: 1.5rem 2rem 5rem;
+    line-height: 1.8;
+}
+
+.btn {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    /* border: 2px solid #443311; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* margin: 0 2rem; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.btn-left {
+    left: -1%;
+}
+.btn-right {
+    right: -1%;
+}
+
+.btn .icon-left,
+.btn .icon-right {
+    font-size: 3rem;
+    color: #443311;
+}
+
+@media screen and (min-width: 768px) {
+    .feedback-content {
+        font-size: 1.2rem;
+        padding: 1.5rem 2rem 5rem;
+        line-height: 1.8;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .feedback-content {
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem 5rem;
+        line-height: 1.8;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .feedback-content {
+        font-size: 1.8rem;
+        padding: 1.5rem 2rem 5rem;
+        line-height: 1.8;
+    }
+}
+
+/* *********************** */
+
+.news-container {
+    position: relative;
+}
+
+.newmiddle {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    background: url(../assets/choco/3b72a182-525b-4482-a5b4-842ca4fdd008.jpg)
+        no-repeat center/cover;
+
+    margin-bottom: 10rem;
+}
+
+.newmiddle::before,
+.newmiddle::after {
+    content: "";
+    width: 100%;
+    height: 6.5vw;
+    position: absolute;
+    z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .newmiddle {
+        width: 100%;
+        height: 30rem;
+        position: relative;
+        background: url(../assets/choco/3b72a182-525b-4482-a5b4-842ca4fdd008.jpg)
+            no-repeat center/cover;
+
+        margin-bottom: 10rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .newmiddle {
+        width: 100%;
+        height: 40rem;
+        position: relative;
+        background: url(../assets/choco/3b72a182-525b-4482-a5b4-842ca4fdd008.jpg)
+            no-repeat center/cover;
+
+        margin-bottom: 10rem;
+    }
+}
+
+.newmiddle::before {
+    background: url(../assets/Untitled/news_top_test.png) no-repeat center/101%
+        auto;
+    top: -1vw;
+}
+
+.newmiddle::after {
+    background: url(../assets/Untitled/news_bottom_test.png) no-repeat
+        center/101% auto;
+    bottom: -1vw;
+}
+
+.newmiddle-products {
+    background: url(../assets/choco/section_products.jpg);
+    background-attachment: fixed;
+}
+
+.newmiddle-aboutus {
+    background: url(../assets/choco/67059066_1752348101564270_2748838731181267821_n.jpg)
+        no-repeat center/cover;
+}
+
+.newmiddle-feedback {
+    background: url(../assets/nakamara/header_thenakamura_10.jpg) no-repeat
+        center/cover;
+}
+
+.section-news {
+    margin-bottom: 20rem;
+}
+
+.section-title {
+    font-size: 4.2rem;
+    text-align: center;
+    margin-bottom: 10rem;
+    font-weight: 600;
+    color: #443311;
+}
+
+.news-box {
+    font-size: 2.4rem;
+    padding: 2rem;
+    border-bottom: 1px solid #443311;
+}
+
+.news-box a {
+    color: #443311;
+    text-decoration: none;
+}
+
+.news-date {
+    color: #b18f6e;
+}
+
+.news-title {
+    padding: 2rem 0 2.5rem 0;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.news-more {
+    text-align: end;
+}
+
+.news-more a {
+    border-bottom: 2px dashed #b18f6e;
+}
+
+/* ******************** */
+
+.footer {
+    width: 100%;
+    background-color: #e2cebc;
+    padding: 5rem 0 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.footer-nav a {
+    display: block;
+    text-decoration: none;
+    color: #443311;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footer-information {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-icon {
+    font-size: 2rem;
+}
+
+.footer-information li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-information .footer-icon {
+    margin-right: 1rem;
+}
+
+.footer-ohter {
+    text-align: center;
+}
+
+/* ************************************************** */
+.products-banner {
+    width: 100%;
+
+    padding-top: 6.4rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    height: 30rem;
+
+    background: url(../assets/choco/products_banner2.webp) no-repeat
+        center/cover;
+
+    background-color: #fa0;
+
+    position: relative;
+}
+
+/* *************************** */
+
+.banner-header {
+    font-size: 4.2rem;
+    color: #f6f6f6;
+
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.products-breadcrumbs {
+    margin-bottom: 3rem;
+}
+
+.breadcrumbs-list {
+    display: flex;
+    font-size: 1.6rem;
+
+    margin-left: 2rem;
+}
+
+.breadcrumbs-item:not(:first-child) ::before {
+    content: ">";
+    padding: 0 1rem;
+}
+
+.breadcrumbs-item a {
+    color: #b18f6e;
+    text-decoration: none;
+}
+.breadcrumbs-item:last-child a {
+    color: #443311;
+    text-decoration: none;
+}
+
+.category-list {
+    border: 1px solid #ddd;
+
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.category-item {
+    font-size: 2.2rem;
+    border-bottom: 1px solid #ddd;
+    padding: 2rem 0;
+    cursor: pointer;
+}
+
+.category-item:first-child {
+    padding-top: 0;
+}
+.category-item:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.collection-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: 3rem;
+    color: #443311;
+    border-left: 3px solid #443311;
+}
+
+.collection-mode {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.products-total {
+    font-size: 1.6rem;
+}
+
+.mode {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 0.1rem;
+
+    cursor: pointer;
+}
+
+.mode-icon {
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mode-grid {
+    background-color: #eee;
+}
+
+.row-head {
+    margin-bottom: 2rem;
+}
+
+.row-body {
+    margin-bottom: 5rem;
+}
+
+.row-footer {
+    margin-bottom: 5rem;
+}
+
+.pagination {
+    font-size: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination .current {
+    pointer-events: none;
+    color: #aaa;
+}
+
+.pagination .current::after {
+    content: "";
+    width: 100%;
+    height: 0.3rem;
+    background-color: #443311;
+    position: absolute;
+    left: 0;
+
+    bottom: -1rem;
+}
+
+.page-numbers {
+    margin: 0 2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.page-numbers ion-icon {
+    vertical-align: middle;
+}
+
+/* ******************************************88 */
+
+.single-breadcrumbs {
+    margin: 10rem 0;
+}
+
+.single-img {
+    position: relative;
+    padding-top: 100%;
+    margin-bottom: 2rem;
+}
+.single-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-sub img {
+    width: 100%;
+}
+
+.single-name h2 {
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin-bottom: 10rem;
+}
+.single-description {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    margin-bottom: 10rem;
+}
+
+.single-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    border-bottom: 1px solid #000;
+}
+
+.single-countbox {
+    font-size: 2.2rem;
+    margin-bottom: 5rem;
+}
+.single-countbox p {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.count-btn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.single-countnum {
+    width: 15rem;
+    padding: 0;
+    border: none;
+    background-color: #f6f6f6;
+    text-align: center;
+    font-size: 2.2rem;
+    border-top: 2px solid #443311;
+    border-bottom: 2px solid #443311;
+    padding: 0.5rem 0.5rem;
+}
+
+.plus,
+.minus {
+    font-size: 2.2rem;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid #443311;
+    cursor: pointer;
+}
+
+.plus {
+    border-radius: 0 1rem 1rem 0;
+}
+.minus {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.single-price,
+.single-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #000;
+}
+
+.single-btns {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.single-btns div:hover {
+    background-color: #431;
+    color: #f6f6f6;
+    transition: all 0.3s ease-in;
+}
+
+.single-buy,
+.single-addcart {
+    font-size: 2.2rem;
+    padding: 1rem 2rem;
+    border: 2px solid #443311;
+    border-radius: 1rem;
+    background-color: #f4ece5;
+}
+
+.single-head {
+    margin-bottom: 10rem;
+}
+
+.tab-links {
+    display: flex;
+    font-size: 2.2rem;
+    justify-content: space-around;
+    padding: 1rem;
+    border-bottom: 2px solid #000;
+    margin-bottom: 3rem;
+    color: #999;
+}
+
+.tab-links .tab-current {
+    color: #443311;
+    font-weight: 600;
+    cursor: default;
+}
+
+.tab-link {
+    cursor: pointer;
+}
+
+.single-body {
+    margin-bottom: 5rem;
+}
+
+.tab-content {
+    margin-bottom: 2rem;
+}
+
+.taste-card {
+    margin-bottom: 3rem;
+}
+
+.imgtest img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: 90%;
+}
+
+.taste-name {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.taste-img {
+    text-align: center;
+}
+
+.taste-img img {
+    width: 50%;
+}
+
+.taste-description {
+    margin: auto;
+    width: 75%;
+    font-size: 2.2rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.taste-slider {
+    position: relative;
+}
+
+.taste-slider .slider-dots {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.other-title {
+    border-top: 2px solid #431;
+    padding: 2rem 0;
+    font-size: 3.2rem;
+    text-align: center;
+}
+
+.customizelink {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3.2rem;
+    padding: 2rem 0;
+
+    text-decoration: none;
+
+    color: #443311;
+}
+/* Customize */
+
+[draggable="true"] {
+    /* To prevent user selecting inside the drag source */
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.customize-banner {
+    background: url(../assets/choco/customize_banner.jpg) no-repeat center /
+        cover;
+}
+
+.customize-row {
+    margin-bottom: 5rem;
+}
+
+.customize-col {
+    position: relative;
+    top: 0;
+}
+
+.customize-box {
+    margin: auto;
+    width: 80%;
+    position: sticky;
+    top: 8rem;
+}
+
+.dropbox {
+    aspect-ratio: 1/1;
+}
+
+.dropbox .choco-img img {
+    width: 100%;
+}
+
+.customize-item {
+    background-image: radial-gradient(15rem at center, #333, #555);
+    /* background: url(/assets/nakamara/Green\ Tea.png) no-repeat center/cover; */
+}
+.grid22 .customize-item {
+    border: 20px solid #b18f6e;
+}
+.grid33 .customize-item {
+    border: 15px solid #b18f6e;
+}
+.grid44 .customize-item {
+    border: 10px solid #b18f6e;
+}
+
+.choco-box h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.customize-item img {
+    width: 100%;
+}
+
+.choco-item {
+    margin-bottom: 2rem;
+}
+
+.choco-img {
+    cursor: move;
+    width: 100%;
+}
+
+.choco-img img {
+    width: 100%;
+}
+
+.customize-size,
+.customize-color,
+.customize-choco {
+    margin-bottom: 6rem;
+}
+
+.customize-size p,
+.customize-color p,
+.customize-choco p {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.customize-tt {
+    overflow-y: scroll;
+    padding: 0 2rem;
+    width: 100%;
+    height: 50vw;
+    margin-bottom: 3rem;
+}
+
+.size-row,
+.color-row,
+.choco-row {
+    background-color: #f4ece5;
+    padding: 1rem 0;
+    border-radius: 1rem;
+}
+
+.size-item {
+    font-size: 2rem;
+    text-align: center;
+    padding: 5rem;
+    background-color: #ccc;
+    border: 1px dashed #443311;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.color-item {
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: #eee;
+    border: 1px dashed #443311;
+    border-radius: 1rem;
+
+    cursor: pointer;
+}
+
+.item-active {
+    background-color: #e3c5a2;
+    border: 1px solid #443311;
+}
+
+.color-col {
+    display: flex;
+    justify-content: center;
+}
+
+.colorblock {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 99px;
+}
+
+.block-grown {
+    background-color: #b18f6e;
+}
+.block-blue {
+    background-color: skyblue;
+}
+.block-green {
+    background-color: #39c5bb;
+}
+.block-red {
+    background-color: #e15a5a;
+}
+
+.choco-row {
+    margin-bottom: 2rem;
+}
+
+.choco-item p {
+    color: #443311;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.choco-item:hover {
+    background-color: #e3c5a2;
+}
+
+.cover {
+    margin: auto;
+    width: 90%;
+    height: 40vw;
+    background-color: #b18f6e;
+    box-shadow: 1px 1px 10px 1px #33333380;
+    position: relative;
+    z-index: 2;
+    top: 6rem;
+}
+
+.cover img {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.customize-messagebox {
+    margin-bottom: 3rem;
+}
+
+.customize-message {
+    font-size: 2.6rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.customize-message span {
+    color: #aaa;
+    font-size: 1.6rem;
+}
+
+.msgarea {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 2.2rem;
+    padding: 1rem 0 0 0;
+}
+
+.customize-total {
+    font-size: 2.6rem;
+    padding: 0.7rem 2rem;
+}
+
+.customize-btns {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customize-reset,
+.customize-tocart {
+    background-color: #f4ece5;
+    color: #443311;
+    border: 1px solid #443311;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+/* ******************關於我們******************* */
+
+.about-banner {
+    background: url(../assets/choco/draw4.png) no-repeat center/cover;
+}
+
+.part1-col {
+    margin-bottom: 20rem;
+}
+
+.part1 {
+    position: relative;
+}
+
+.part1 .img1 {
+    width: 100%;
+    clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 50%);
+}
+
+.part1 .img2 {
+    position: absolute;
+    bottom: -60%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0, 100% 50%, 0 100%, 0 50%);
+}
+
+.part2-col {
+    margin-bottom: 2rem;
+}
+
+.part2-row {
+    flex-direction: row-reverse;
+}
+
+.part2 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.part2 .img1 {
+    width: 50%;
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+}
+.part2 .img2 {
+    width: 50%;
+    position: relative;
+    top: 6rem;
+    right: -4rem;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+.part2 .img3 {
+    width: 50%;
+    position: relative;
+    bottom: 8rem;
+    left: 0rem;
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+}
+.part2 .img4 {
+    width: 50%;
+    position: relative;
+    bottom: 2rem;
+    right: -4rem;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+}
+
+.part3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txtsection {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.txtsection p {
+    writing-mode: vertical-rl;
+    text-shadow: 1px 1px 10px #44331180;
+}
+
+.txtsection > .txt1 > span {
+    font-size: 3rem;
+    opacity: 0;
+}
+.txtsection > .txt2 > span {
+    font-size: 3em;
+    opacity: 0;
+}
+
+.txtsection > .txt3 > span {
+    font-size: 3em;
+    opacity: 0;
+}
+
+.playani > span {
+    animation: fadeIn 0.3s ease-in both;
+}
+
+p span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+p span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+p span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+p span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+p span:nth-child(6) {
+    animation-delay: 1s;
+}
+p span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+p span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+p span:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.shop-banner {
+    width: 100%;
+}
+
+.shop-banner img {
+    width: 100%;
+}
+
+/* ******************最新消息******************* */
+
+.news-banner {
+    background: url(../assets/choco/faq_banner.jpg) no-repeat center/cover;
+}
+
+.info-col {
+    margin-bottom: 3rem;
+}
+
+.info-row {
+    border: 2px solid #443311;
+}
+
+.row-center {
+    justify-content: center;
+}
+
+.info-container {
+    min-width: 90rem;
+}
+
+.info-img {
+    width: 100%;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+}
+
+.info-img img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.info-box {
+    padding: 1.5rem;
+    color: #443311;
+    margin-bottom: 6rem;
+}
+
+.info-box a {
+    text-decoration: none;
+    color: #443311;
+}
+
+.info-date {
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #443311;
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.info-tag {
+    color: #f6f6f6;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    vertical-align: middle;
+}
+
+.tag-event {
+    background-color: #39c5bb;
+}
+.tag-shop {
+    background-color: #b18f6e;
+}
+.tag-new {
+    background-color: palevioletred;
+}
+
+.info-title {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #443311;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.info-contents {
+    padding-top: 2rem;
+    line-height: 1.8;
+    font-size: 1.8rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.info-link {
+    display: flex;
+    justify-content: end;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.info-link a {
+    text-decoration: none;
+    color: #443311;
+}
+
+/* ******************訂購須知******************* */
+
+.faq-banner {
+    background: url(../assets/choco/products_banner.jpg) no-repeat center/cover;
+}
+
+.order-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3.6rem;
+}
+
+.order-step {
+    display: flex;
+    font-size: 2.2rem;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+
+    cursor: pointer;
+
+    border: 2px solid #443311;
+    padding: 2rem;
+
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.order-content {
+    width: 78%;
+    position: relative;
+    margin: auto;
+
+    line-height: 1.5;
+
+    padding: 2rem;
+
+    background-color: #f4ece5;
+
+    color: #443311;
+    display: none;
+}
+
+.order-row {
+    margin-bottom: 2rem;
+}
+
+.order-item {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.order-active {
+    display: block;
+}

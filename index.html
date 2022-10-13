@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/grid.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/3242a2ffdc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="row navbar">
+                <div class="col-3">
+                    <div class="logo-box">
+                        <a href="index.html">
+                            <img src="assets/LOGO.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul class="nav-group">
+                        <li class="nav-item">
+                            <a href="products.html" data-en="Products">
+                                <span class="show1">產品一覽</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customize.html" data-en="Customize">
+                                <span class="show1">客製禮盒</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" data-en="AboutUs">
+                                <span class="show1">關於我們</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" data-en="News">
+                                <span class="show1">最新資訊</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="faq.html" data-en="FAQ">
+                                <span class="show1">訂購須知</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="icon-group">
+                        <a href="#" class="icon-item icon-item--cart">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a>
+
+                        <a href="#" class="icon-item icon-item--user">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--  <section class="section section-banner">
+
+            <div class="container">
+                <div class="banner">
+                    <div class="geometry geometry-square">
+                        <img src="./assets/Untitled/Rectangle.png" alt="">
+                    </div>
+
+                    <div class="geometry geometry-circle">
+                        <img src="./assets/Untitled/Ellipse.png" alt="">
+                    </div>
+
+                    <div class="geometry geometry-triangle">
+                        <img src="./assets/Untitled/Polygon.png" alt="">
+                    </div>
+                    <div class="banner__content">
+                        <h1 class="heading-main">27度C
+                            <span class="heading-sub">
+                                手工巧克力
+                            </span>
+                        </h1>
+                    </div>
+
+                    <div class="banner__slider">
+                        <img src="./assets/choco/272831381_3023353831312177_6009429568448303259_n.jpg" alt="">
+
+                        <div class="slider-dots">
+                            <button class="dot dot-active"></button>
+                            <button class="dot"></button>
+                            <button class="dot"></button>
+                            <button class="dot"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!--  <section class="section section-products">
+            <div class="newmiddle newmiddle-products">
+            </div>
+
+            <div class="container products-container products-bonbon">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            產品一覽
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="geometry geometry-circle">
+                    <img src="./assets/Untitled/Ellipse.png" alt="">
+                </div>
+
+                <div class="geometry geometry-triangle">
+                    <img src="./assets/Untitled/Polygon.png" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row ">
+                            <div class="col-12 col-md-6">
+                                <div class="product-pics">
+                                    <img src="./assets/choco/bonbon_card1.jpg">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="product-category">
+                                    <h3>夾心(BonBons)</h3>
+                                    <div class="product-description">
+                                        <p>嚴選優質食材與巧克力相結合萃取天然香氣</p>
+                                        <p>外殼與專用彩繪可可脂賦予巧克力新的生命</p>
+                                        <p>從視覺味覺到香氣口感</p>
+                                        <p>完美掌握平衡體驗與眾不同的巧克力新境界</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container card-container">
+                    <div class="row">
+                        <div class="col-12 col-md-3 card-box">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">bonbon巧克力(4入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.300</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/choco/bonbon_product1.jpg">
+                                </div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">bonbon巧克力(4入)</div>
+                                    <div class="product-price">NT.300</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 card-box">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">bonbon巧克力(9入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.300</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/choco/bonbon_product2.webp">
+                                </div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">bonbon巧克力(9入)</div>
+                                    <div class="product-price">NT.600</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 card-box">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">bonbon巧克力(12入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.900</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/choco/bonbon_product3.webp">
+                                </div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">bonbon巧克力(24入)</div>
+                                    <div class="product-price">NT.1800</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 card-box">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">bonbon巧克力(24入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.1800</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/choco/bonbon_product4.webp">
+                                </div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">bonbon巧克力(24入)</div>
+                                    <div class="product-price">NT.1800</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="more">
+                            <a href="products.html">
+                                查看全部
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container products-container products-raw">
+                <div class="geometry geometry-square">
+                    <img src="./assets/Untitled/Rectangle.png" alt="">
+                </div>
+
+                <div class="geometry geometry-triangle">
+                    <img src="./assets/Untitled/Polygon.png" alt="">
+                </div>
+
+                <div class="geometry geometry-circle">
+                    <img src="./assets/Untitled/Ellipse.png" alt="">
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row row__reverse">
+                            <div class="col-12 col-md-6">
+                                <div class="product-pics raw-pics">
+                                    <img src="./assets/choco/raw_card1.jpg">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="product-category">
+                                    <h3>生巧克力</h3>
+                                    <div class="product-description">
+                                        <p>濃郁清爽的味道深受世界各地鑑賞家的喜愛</p>
+                                        <p>生巧克力入口即化豐富清爽的味道廣受歡迎</p>
+                                        <p>與白蘭地或牛奶等烈性酒搭配時味道更好</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container card-container">
+                    <div class="row">
+                        <div class="col-12 col-md-3 card-box">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.750</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/choco/raw_product1.jpg">
+                                </div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">抹茶生巧克力(20入)</div>
+                                    <div class="product-price">NT.750</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 card-box">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">75%生巧克力(20入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.300</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/choco/raw_product2.jpg">
+                                </div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">75%生巧克力(20入)</div>
+                                    <div class="product-price">NT.300</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 card-box">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">87%生巧克力(20入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.300</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/choco/raw_product3.jpg">
+
+                                </div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">87%生巧克力(20入)</div>
+                                    <div class="product-price">NT.300</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 card-box">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">雪莓生巧克力(30入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.480</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img src="./assets/choco/raw_product4.jpg">
+                                </div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">雪莓生巧克力(30入)</div>
+                                    <div class="product-price">NT.480</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="more">
+                            <a href="products.html">
+                                查看全部
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="section section-aboutus">
+            <div class="newmiddle newmiddle-aboutus">
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            關於我們
+                        </h2>
+                    </div>
+                </div>
+                <div class="row polys-row">
+                    <div class="col-8 col-md-8 col-lg-10 col-xl-12">
+                        <div class="polys">
+                            <a href="about.html" class="a">
+                            </a>
+                            <p class="a-content">從草稿設計開始</p>
+                            <a href="about.html" class="b"></a>
+                            <p class="b-content">製作外殼</p>
+                            <a href="about.html" class="c"></a>
+                            <a href="about.html" class="d"></a>
+                            <a href="about.html" class="e"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--  <section class="section section-feedback">
+            <div class="newmiddle newmiddle-feedback">
+
+            </div>
+
+            <div class="container feedback-container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            客戶評價
+                        </h2>
+                    </div>
+                </div>
+                <div class="btn btn-left">
+                    <ion-icon class="icon-left" name="chevron-back-outline"></ion-icon>
+                </div>
+                <div class="btn btn-right">
+                    <ion-icon class="icon-right" name="chevron-forward-outline"></ion-icon>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="feedback-card">
+                            <div class="feedback-user">
+                                <div class="user-img">
+                                    <img src="./assets/choco/fakeimg1.jpg">
+                                </div>
+                            </div>
+
+                            <div class="feedback-img">
+                                <img src="./assets/choco/feedback_1.jpg">
+                            </div>
+
+                            <div class="feedback-content">
+                                <p>原本以為會是淡淡的香氣沒想到威士忌味道還蠻濃郁的❗️和生巧克力的口感、質地很搭一定要試試看~
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="feedback-card">
+                            <div class="feedback-user">
+                                <div class="user-img">
+                                    <img src="./assets/choco/fakeimg1.jpg">
+                                </div>
+                            </div>
+
+                            <div class="feedback-img">
+                                <img src="./assets//choco/feedback_2.jpg">
+                            </div>
+
+                            <div class="feedback-content">
+                                <p>手掌握-最美的星球🌍
+
+                                    是用山/海/雲的概念刻畫出
+
+                                    最美的巧克力🥰
+
+                                    #星球巧克力
+                                    #香草騎士。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="feedback-card">
+                            <div class="feedback-user">
+                                <div class="user-img">
+                                    <img src="./assets/choco/fakeimg1.jpg">
+                                </div>
+                            </div>
+
+                            <div class="feedback-img">
+                                <img src="./assets/choco/feedback_3.jpg">
+                            </div>
+
+                            <div class="feedback-content">
+                                <p>每一款巧克力
+                                    都是不一樣的口味搭配星球圖案
+                                    喜歡酒感的巧克力
+                                    也很多可以選擇👍
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <section class="section section-news">
+            <div class="newmiddle">
+
+            </div>
+
+            <div class="container news-container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">
+                            最新消息
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="news-box">
+                            <div class="news-date">
+                                2022.09.18
+                            </div>
+
+                            <div class="news-title">
+                                <a href="news.html">
+                                    找不到來電照顧承擔榮譽指數你不預測馬上，任何自己搜尋前面上門第一個靈活一位場所校長一般定義今日，欄。
+                                </a>
+                            </div>
+
+                            <div class="news-more">
+                                <a href="news.html">read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="news-box">
+                            <div class="news-date">
+                                2022.09.18
+                            </div>
+
+                            <div class="news-title">
+                                <a href="news.html">
+                                    找不到來電照顧承擔榮譽指數你不預測馬上，任何自己搜尋前面上門第一個靈活一位場所校長一般定義今日，欄。
+                                </a>
+                            </div>
+
+                            <div class="news-more">
+                                <a href="news.html">read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="news-box">
+                            <div class="news-date">
+                                2022.09.18
+                            </div>
+
+                            <div class="news-title">
+                                <a href="news.html">
+                                    找不到預測馬上，任何自己搜尋前面上門第一個靈活一位場所校長一般定義今日，欄。
+                                </a>
+                            </div>
+
+                            <div class="news-more">
+                                <a href="news.html">read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="more">
+                            <a href="news.html">查看全部</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="footer-nav">
+                        <a href="products.html">產品一覽</a>
+                        <a href="customize.html">客製禮盒</a>
+                        <a href="about.html">關於我們</a>
+                        <a href="news.html">最新資訊</a>
+                        <a href="faq.html">訂購須知</a>
+                    </nav>
+                </div>
+
+                <div class="col-12">
+                    <ul class="footer-information">
+                        <li class="footer-tel">
+                            <ion-icon class="footer-icon" name="call-outline"></ion-icon>
+                            <span>03-425-1108</span>
+                        </li>
+                        <li class="footer-address">
+                            <ion-icon class="footer-icon" name="location-outline"></ion-icon>
+                            <span>320桃園市中壢區復興路46號9樓</span>
+                        </li>
+                        <li class="footer-mail">
+                            <ion-icon class="footer-icon" name="mail-outline"></ion-icon>
+                            <span>27Chocolate@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <div class="footer-ohter">
+                        <p footer-other>本網站為緯育TibaMe前端設計工程師班學員專題作品，本平台僅供學習、展示之用。</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
