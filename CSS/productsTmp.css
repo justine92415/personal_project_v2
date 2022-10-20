@@ -1,0 +1,145 @@
+.banner-header {
+    font-size: 4.2rem;
+    color: #f6f6f6;
+
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.products-breadcrumbs {
+    margin-bottom: 3rem;
+}
+
+.breadcrumbs-list {
+    display: flex;
+    font-size: 1.6rem;
+
+    margin-left: 2rem;
+}
+
+.breadcrumbs-item:not(:first-child) ::before {
+    content: ">";
+    padding: 0 1rem;
+}
+
+.breadcrumbs-item a {
+    color: #b18f6e;
+    text-decoration: none;
+}
+.breadcrumbs-item:last-child a {
+    color: #443311;
+    text-decoration: none;
+}
+
+.category-list {
+    border: 1px solid #ddd;
+
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.category-item {
+    font-size: 2.2rem;
+    border-bottom: 1px solid #ddd;
+    padding: 2rem 0;
+    cursor: pointer;
+}
+
+.category-item:first-child {
+    padding-top: 0;
+}
+.category-item:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.collection-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: 3rem;
+    color: #443311;
+    border-left: 3px solid #443311;
+}
+
+.collection-mode {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.products-total {
+    font-size: 1.6rem;
+}
+
+.mode {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 0.1rem;
+
+    cursor: pointer;
+}
+
+.mode-icon {
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mode-grid {
+    background-color: #eee;
+}
+
+.row-head {
+    margin-bottom: 2rem;
+}
+
+.row-body {
+    margin-bottom: 5rem;
+}
+
+.row-footer {
+    margin-bottom: 5rem;
+}
+
+.pagination {
+    font-size: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination .current {
+    pointer-events: none;
+    color: #aaa;
+}
+
+.pagination .current::after {
+    content: "";
+    width: 100%;
+    height: 0.3rem;
+    background-color: #443311;
+    position: absolute;
+    left: 0;
+
+    bottom: -1rem;
+}
+
+.page-numbers {
+    margin: 0 2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.page-numbers ion-icon {
+    vertical-align: middle;
+}

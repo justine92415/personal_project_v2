@@ -1,19 +1,17 @@
 const rowBody = document.querySelector(".row-body");
+const productsBanner = document.querySelector(".products-banner");
 const categoryItem = document.querySelectorAll(".category-item");
 const pagination = document.querySelector(".pagination");
 const productsTotal = document.querySelector(".products-total");
-const sortType = this.document.querySelector(".sort-type");
-
+const sortType = document.querySelector(".sort-sel");
 let curUrl = new URL(document.URL);
 let queryParam = curUrl.searchParams.toString();
 let apiURL = "https://learnnodejs-3s6rmmfxwq-de.a.run.app/api/v1/tours/";
 let defaultSort = "name";
-
 let url = `${apiURL}${
     queryParam === "" ? `?sort=${defaultSort}&limit=6&page=1` : "?" + queryParam
 }`;
 
-// let hstate = history.state;
 if (!history.state) {
     getPageNum();
 } else {
@@ -38,6 +36,21 @@ sortType.addEventListener("change", (e) => {
         );
         getAjaxData(url);
     } else {
+        url = `${apiURL}?category=${
+            history.state.category
+        }&sort=${defaultSort}&limit=6&page=${
+            history.state ? history.state.page : "1"
+        }`;
+        history.pushState(
+            { category: history.state.category, sort: defaultSort },
+            null,
+            `?category=${
+                history.state.category
+            }&sort=${defaultSort}&limit=6&page=${
+                history.state ? history.state.page : "1"
+            }`
+        );
+        getAjaxData(url);
     }
 });
 console.log(defaultSort);
@@ -74,8 +87,13 @@ categoryItem.forEach((category) => {
     // 為每個產品分類建立事件聆聽(點擊事件)
     category.addEventListener("click", (e) => {
         // 取得點擊目標的category屬性
+        productsBanner.scrollIntoView({
+            behavior: "smooth",
+            block: "end",
+            inline: "nearest",
+        });
         let curCategory = e.target.dataset.category;
-        defaultSort = "name";
+        // defaultSort = "name";
         // 當前的curCategory若為all則向Server取得所有產品資料，否則只取某產品的資料
         if (curCategory === "all") {
             history.pushState(null, null, `/products.html`);
@@ -102,15 +120,16 @@ function getAjaxData(reqUrl) {
     // 向Server發出AJAX請求，請求方法為GET
     axios.get(reqUrl).then(function (res) {
         let { tours } = res.data.dtat;
+        console.log(tours);
         tours.forEach((choco) => {
             rowBody.innerHTML += `
-            <div class="col-4">
+            <div class="col-6 col-md-4 ">
                 <div class="product-card">
                     <div class="product-img">
-                        <div class="hovershow ">
+                        <div class="hovershow desktopshow">
                             <p class="hovershow__name">${choco.name}</p>
                             <span class="hovershow__div"></span>
-                            <p class="hovershow__price">NT.300</p>
+                            <p class="hovershow__price">NT.&nbsp${choco.price}</p>
                             <p class="hovershow__description">
                             ${choco.description}
                             </p>
@@ -129,13 +148,35 @@ function getAjaxData(reqUrl) {
                         </div>
                         <img src="./assets/chocoproducts/${choco.images[0]}">
                     </div>
-    
+
+
                     <div class="product-content">
+
+
                         <div class="viewlink">
                             <a href="single.html">詳細介紹</a>
                         </div>
                         <div class="product-name">${choco.name}</div>
-                        <div class="product-price">NT.${choco.price}</div>
+                        <div class="product-price">
+                            <span class="rating">
+                                <ion-icon item-start class="star" name="star"></ion-icon>
+                                ${choco.ratingsAverage}&nbsp&nbsp(&nbsp${choco.ratingsQuantity}&nbsp)
+                            </span>
+                            NT.&nbsp${choco.price}
+                        </div>
+
+                        <div class="mb-carts">
+                            <button class="carts__btn">
+                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                            </button>
+                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                            <button class="carts__btn">
+                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                            </button>
+                            <button class="carts__btn">
+                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>`;
