@@ -1,0 +1,234 @@
+/* Customize */
+
+[draggable="true"] {
+    /* To prevent user selecting inside the drag source */
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.customize-banner {
+    background: url(../assets/choco/customize_banner.jpg) no-repeat center /
+        cover;
+}
+
+.customize-row {
+    margin-bottom: 5rem;
+}
+
+.customize-col {
+    position: relative;
+    top: 0;
+}
+
+.customize-box {
+    margin: auto;
+    width: 100%;
+    position: sticky;
+    top: 8rem;
+}
+
+.dropbox {
+    aspect-ratio: 1/1;
+}
+
+.dropbox .choco-img img {
+    width: 100%;
+}
+
+.customize-item {
+    background-image: radial-gradient(15rem at center, #333, #555);
+    /* background: url(/assets/nakamara/Green\ Tea.png) no-repeat center/cover; */
+}
+.grid22 .customize-item {
+    border: 10px solid #b18f6e;
+}
+.grid33 .customize-item {
+    border: 7.5px solid #b18f6e;
+}
+.grid44 .customize-item {
+    border: 5px solid #b18f6e;
+}
+
+.choco-box h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.customize-item img {
+    width: 100%;
+}
+
+.choco-item {
+    margin-bottom: 2rem;
+}
+
+.choco-img {
+    cursor: move;
+    width: 100%;
+}
+
+.choco-img img {
+    width: 100%;
+}
+
+.customize-size,
+.customize-color,
+.customize-choco {
+    margin-bottom: 6rem;
+}
+
+.customize-size p,
+.customize-color p,
+.customize-choco p {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.customize-tt {
+    /* overflow-y: scroll; */
+    padding: 0 2rem;
+    width: 100%;
+    height: 50vw;
+    margin-bottom: 3rem;
+}
+
+.size-row,
+.color-row,
+.choco-row {
+    background-color: #f4ece5;
+    padding: 1rem 0;
+    border-radius: 1rem;
+}
+
+.size-item {
+    font-size: 2rem;
+    text-align: center;
+    padding: 5rem;
+    background-color: #ccc;
+    border: 1px dashed #443311;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.color-item {
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: #eee;
+    border: 1px dashed #443311;
+    border-radius: 1rem;
+
+    cursor: pointer;
+}
+
+.item-active {
+    background-color: #e3c5a2;
+    border: 1px solid #443311;
+}
+
+.color-col {
+    display: flex;
+    justify-content: center;
+}
+
+.colorblock {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 99px;
+}
+
+.block-grown {
+    background-color: #b18f6e;
+}
+.block-blue {
+    background-color: skyblue;
+}
+.block-green {
+    background-color: #39c5bb;
+}
+.block-red {
+    background-color: #e15a5a;
+}
+
+.choco-row {
+    margin-bottom: 2rem;
+}
+
+.choco-item p {
+    color: #443311;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.choco-item:hover {
+    background-color: #e3c5a2;
+}
+
+.cover {
+    margin: auto;
+    width: 90%;
+    height: 40vw;
+    background-color: #b18f6e;
+    box-shadow: 1px 1px 10px 1px #33333380;
+    position: relative;
+    z-index: 2;
+    top: 6rem;
+}
+
+.cover img {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.customize-messagebox {
+    margin-bottom: 3rem;
+}
+
+.customize-message {
+    font-size: 2.6rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.customize-message span {
+    color: #aaa;
+    font-size: 1.6rem;
+}
+
+.msgarea {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 2.2rem;
+    padding: 1rem 0 0 0;
+}
+
+.customize-total {
+    font-size: 2.6rem;
+    padding: 0.7rem 2rem;
+}
+
+.customize-btns {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customize-reset,
+.customize-tocart {
+    background-color: #f4ece5;
+    color: #443311;
+    border: 1px solid #443311;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}

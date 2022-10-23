@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0"">
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel=" stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/grid.css">
     <link rel="stylesheet" href="./CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,8 @@
         rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://kit.fontawesome.com/3242a2ffdc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="./single.js"></script>
 </head>
 
 <body>
@@ -99,24 +100,27 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="single-img">
-                            <img src="./assets/choco/bonbon_product5.jpg" alt="">
-                            <!-- <img src="/個專/assets/choco/118246967_624726958442888_8427520733205144350_n.jpg" alt=""> -->
+                    <div class="col-12 col-md-6 single-imgs">
+                        <div class="single-main">
+                            <img src="#" alt="">
+                            <!-- <img src="./assets/choco/bonbon_product5.jpg" alt=""> -->
                         </div>
                         <div class="single-sub">
                             <div class="row">
                                 <div class="col-4">
-                                    <img src="./assets/choco/bonbon_product5.jpg" alt="">
+                                    <img src="" alt="">
+                                    <!-- <img src="./assets/choco/bonbon_product5.jpg" alt=""> -->
                                 </div>
                                 <div class="col-4">
 
-                                    <img src="./assets/choco/sub_img2.jpg" alt="">
+                                    <img src="" alt="">
+                                    <!-- <img src="./assets/choco/sub_img2.jpg" alt=""> -->
 
                                 </div>
                                 <div class="col-4">
 
-                                    <img src="./assets/choco/sub_img1.jpg" alt="">
+                                    <img src="" alt="">
+                                    <!-- <img src="./assets/choco/sub_img1.jpg" alt=""> -->
 
                                 </div>
                             </div>
@@ -128,6 +132,21 @@
                                 星球巧克力(12顆入)
                             </h2>
                         </div>
+
+                        <div class="single-rating">
+                            <ion-icon class="single-star" name="star">
+                            </ion-icon>
+                            <ion-icon class="single-star" name="star">
+                            </ion-icon>
+                            <ion-icon class="single-star" name="star">
+                            </ion-icon>
+                            <ion-icon class="single-star" name="star">
+                            </ion-icon>
+                            <ion-icon class="single-star" name="star">
+                            </ion-icon>
+                            <span class="single-quantity">&nbsp;9則評價</span>
+                        </div>
+
                         <div class="single-description">
                             <p>浩瀚無垠的宇宙到不了盡知的那天，於是獻上一幅浪漫的星空，
                                 展開探索美味的旅程行李有點多，因為裝了過多的濃郁、滿滿的甜蜜、
@@ -137,23 +156,23 @@
                             <div class="single-count">
                                 <p>購買數量</p>
                                 <div class="count-btn">
-                                    <div class="minus">
+                                    <button class="minus">
                                         <ion-icon name="remove-outline"></ion-icon>
-                                    </div>
+                                    </button>
                                     <input class="single-countnum" type="number" value="1">
-                                    <div class="plus">
+                                    <button class="plus">
                                         <ion-icon name="add-outline"></ion-icon>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                             <div class="single-pricebox">
                                 <div class="single-price">
                                     <p>售價</p>
-                                    <p>NT.900</p>
+                                    <p>NT.&nbsp;<span class="price">900</span></p>
                                 </div>
                                 <div class="single-total">
                                     <p>小計</p>
-                                    <p>NT.1800</p>
+                                    <p>NT.&nbsp;<span class="total">1800</span></p>
                                 </div>
                             </div>
                         </div>
@@ -165,17 +184,188 @@
                                 加到購物車
                             </div>
                         </div>
+
+                        <div class="bag">
+                            <div class="row bag-content">
+                                <div class="col-12 ">加購手提袋</div>
+                                <div class="col-12 ">NT.&nbsp;10</div>
+                                <button class="bag-add">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                </button>
+                            </div>
+                            <div class="bag-img">
+                                <img src="https://picsum.photos/300/200/?random=10">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-12">
-                        <ul class="tab-links">
-                            <li class="tab-link tab-current">口味介紹</li>
-                            <li class="tab-link">商品描述</li>
-                            <li class="tab-link">客戶評價</li>
-                        </ul>
+                        <div class="rating-box">
+                            <p>客戶評價</p>
+                            <div class="single-quantity">&nbsp;9則評價
+                            </div>
+                            <div class="star-box">
+                                <div class="rating-stars">
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                </div>
+                                <progress max="15" value="9"></progress>
+                            </div>
+                            <div class="star-box">
+                                <div class="rating-stars">
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                </div>
+                                <progress max="9" value="3"></progress>
+                            </div>
+                            <div class="star-box">
+                                <div class="rating-stars">
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                </div>
+                                <progress max="9" value="2"></progress>
+                            </div>
+                            <div class="star-box">
+                                <div class="rating-stars">
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+
+                                </div>
+                                <progress max="9" value="1"></progress>
+                            </div>
+                            <div class="star-box">
+                                <div class="rating-stars">
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                    <ion-icon class="single-star" name="star-outline"></ion-icon>
+                                </div>
+                                <progress max="9" value="0"></progress>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-12 single-body">
+                    <div class="col-12">
+                        <div class="review">
+                            <div class="review-head">
+                                <div class="rating-stars">
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                </div>
+                                <div>
+                                    2022/10/21
+                                </div>
+                            </div>
+                            <div class="review-customer">
+                                <div class="customer-img">
+                                    <img src="https://fakeimg.pl/50x50/200">
+                                </div>
+                                <div class="customer-name">
+                                    asiagodtoneee
+                                </div>
+                            </div>
+                            <div class="review-title">像是需要審核，業主。</div>
+                            <p class="review-content">做好圖片文檔雖然鎖定已被最快你沒有一部選擇深深風情素質，輔助懷疑，特殊初步，多。</p>
+                        </div>
+                        <div class="review">
+                            <div class="review-head">
+                                <div class="rating-stars">
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                </div>
+                                <div>
+                                    2022/10/21
+                                </div>
+                            </div>
+                            <div class="review-customer">
+                                <div class="customer-img">
+                                    <img src="https://fakeimg.pl/50x50/200">
+                                </div>
+                                <div class="customer-name">
+                                    asiagodtoneee
+                                </div>
+                            </div>
+                            <div class="review-title">像是需要審核，業主。</div>
+                            <p class="review-content">做好圖片文檔雖然鎖定已被最快你沒有一部選擇深深風情素質，輔助懷疑，特殊初步，多。</p>
+                        </div>
+                        <div class="review">
+                            <div class="review-head">
+                                <div class="rating-stars">
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                    <ion-icon class="single-star" name="star">
+                                    </ion-icon>
+                                </div>
+                                <div>
+                                    2022/10/21
+                                </div>
+                            </div>
+                            <div class="review-customer">
+                                <div class="customer-img">
+                                    <img src="https://fakeimg.pl/50x50/200">
+                                </div>
+                                <div class="customer-name">
+                                    asiagodtoneee
+                                </div>
+                            </div>
+                            <div class="review-title">像是需要審核，業主。</div>
+                            <p class="review-content">做好圖片文檔雖然鎖定已被最快你沒有一部選擇深深風情素質，輔助懷疑，特殊初步，多。</p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="col-12 single-body">
                         <div class="tab-content">
                             <div class="row ">
                                 <div class="col-4">
@@ -267,7 +457,7 @@
                                 <button class="dot"></button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-12 single-footer">
                         <div class="other-title">
@@ -289,7 +479,7 @@
                                         <button class="carts__btn">
                                             <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
                                         </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
+                                        <input class="carts__num" type="text" min="1" max="99" value="1">
                                         <button class="carts__btn">
                                             <ion-icon class="btn__minus" name="add-outline"></ion-icon>
                                         </button>
