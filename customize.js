@@ -205,13 +205,13 @@ window.addEventListener("load", function () {
     });
 
     toCartBtn.addEventListener("click", function () {
-        // if (window.innerWidth < 1200) {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-        });
-        // }
+        if (window.innerWidth < 1200) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+            });
+        }
         console.log(window.innerWidth);
         chocoContentCard.children[0].innerText = msgArea.value;
         msgArea.value = "";
