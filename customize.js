@@ -144,7 +144,6 @@ window.addEventListener("load", function () {
                 chocoRows[i].style.display = "none";
             }
         }
-        console.log(curStep);
         if (curStep === 2) {
             chocoContent.scrollIntoView({
                 behavior: "smooth",
@@ -205,28 +204,21 @@ window.addEventListener("load", function () {
         });
     });
 
-    msgArea.addEventListener("blur", () => {
-        console.log("sdsa");
-        arrowBack.scrollIntoView({
-            behavior: "smooth",
-            block: "end",
-            inline: "nearest",
-        });
-    });
-
     toCartBtn.addEventListener("click", function () {
-        arrowBack.scrollIntoView({
+        // if (window.innerWidth < 1200) {
+        window.scrollTo({
+            top: 0,
+            left: 0,
             behavior: "smooth",
-            block: "end",
-            inline: "nearest",
         });
+        // }
+        console.log(window.innerWidth);
         chocoContentCard.children[0].innerText = msgArea.value;
         msgArea.value = "";
         chocoContentCard.style.bottom = "50%";
 
         setTimeout(() => {
-            // chocoContentCover.style.left = "0%";
-            this.parentNode.innerText = "已加入購物車，感謝購買";
+            this.parentNode.innerHTML = `<p>已加入購物車，感謝購買</p>`;
             chocoContentCover.style.width = "100%";
         }, 1000);
         arrowBack.style.visibility = "hidden";

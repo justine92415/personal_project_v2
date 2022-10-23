@@ -2046,7 +2046,9 @@ progress::-webkit-progress-value {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+}
+.customize-btns p {
+    font-size: 16px;
 }
 
 .customize-reset,
@@ -2090,6 +2092,16 @@ progress::-webkit-progress-value {
         position: sticky;
         top: 100px;
     }
+    .arrow {
+        margin-top: 50px;
+    }
+    .mb-order {
+        order: 2;
+    }
+
+    .customize-result {
+        order: 3;
+    }
 }
 @media screen and (min-width: 1024px) {
     .cbox {
@@ -2098,6 +2110,14 @@ progress::-webkit-progress-value {
         padding: 10px;
         position: sticky;
         top: 100px;
+    }
+
+    .mb-order {
+        order: 2;
+    }
+
+    .customize-result {
+        order: 3;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -2172,6 +2192,10 @@ progress::-webkit-progress-value {
 
     .customize-btns {
         flex-grow: 3;
+        font-size: 20px;
+    }
+
+    .customize-btns p {
         font-size: 20px;
     }
 
