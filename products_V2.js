@@ -108,7 +108,12 @@ window.addEventListener("load", () => {
             // defaultSort = "name";
             // 當前的curCategory若為all則向Server取得所有產品資料，否則只取某產品的資料
             if (curCategory === "all") {
-                history.pushState(null, null, `/products.html`);
+                // history.pushState(null, null, `/products.html`);
+                history.pushState(
+                    null,
+                    null,
+                    `?sort=${defaultSort}&limit=6&page=1`
+                );
                 url = `${apiURL}?sort=${defaultSort}&limit=6&page=1`;
                 getAjaxData(url);
                 // 取得所有頁碼
@@ -127,9 +132,8 @@ window.addEventListener("load", () => {
     });
 
     function getAjaxData(reqUrl) {
-        // 清除產品容器內容
-        rowBody.innerHTML = "";
-        // 向Server發出AJAX請求，請求方法為GET
+        rowBody.innerHTML = ``;
+
         axios.get(reqUrl).then(function (res) {
             let { tours } = res.data.dtat;
             console.log(tours);

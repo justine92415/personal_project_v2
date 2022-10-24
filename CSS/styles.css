@@ -435,11 +435,11 @@ main {
     color: #443311;
 }
 
-.product-part1 {
+.product-row {
     gap: 100px;
 }
 @media screen and (min-width: 768px) {
-    .product-part1 {
+    .product-row {
         gap: 0px;
     }
 }
@@ -629,7 +629,7 @@ main {
     left: 20%;
 }
 
-.row__reverse {
+.row-reverse {
     flex-direction: row-reverse;
 }
 
@@ -2673,3 +2673,5 @@ p span:nth-child(9) {
 .order-active {
     display: block;
 }
+
+/* ************************************************************ */
