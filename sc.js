@@ -5,13 +5,10 @@ window.addEventListener("load", function () {
     const cartsBody = document.querySelector(".carts-body");
     let cartsGroup = [];
     createCartsItem();
-    const cartsImg = document.querySelector(".carts-img img");
-    const cartsName = document.querySelector(".carts-name");
-    const cartsPrice = document.querySelectorAll(".carts-price");
-    const btnMinus = document.querySelectorAll(".sc-btn .minus");
-    const btnPlus = document.querySelectorAll(".sc-btn .plus");
-    const cartsCountnum = document.querySelectorAll(".carts-countnum");
-    const cartsTotal = document.querySelectorAll(".carts-total");
+    let btnMinus = document.querySelectorAll(".sc-btn .minus");
+    let btnPlus = document.querySelectorAll(".sc-btn .plus");
+    let cartsCountnum = document.querySelectorAll(".carts-countnum");
+    let cartsTotal = document.querySelectorAll(".carts-total");
     let quantity;
 
     btnPlus.forEach((btnP, index) => {
@@ -34,6 +31,7 @@ window.addEventListener("load", function () {
                 console.log(this.localStorage.length);
                 cartsGroup = [];
                 createCartsItem();
+                location.reload();
             }
             cartsCountnum[index].value = quantity - 1;
             cartsTotal[index].innerHTML = `NT.&nbsp${
@@ -50,8 +48,6 @@ window.addEventListener("load", function () {
                 JSON.parse(localStorage.getItem(localStorage.key(i)))
             );
         }
-
-        console.log(cartsGroup);
 
         cartsGroup.forEach((cartsItem) => {
             cartsBody.innerHTML += `

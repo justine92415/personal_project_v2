@@ -1,4 +1,6 @@
+import { sc } from "../shoppingCart.js";
 window.addEventListener("load", function () {
+    sc.checkAndUpdateQuantity();
     const sizeItems = document.querySelectorAll(".size-item");
     const colorItem = document.querySelectorAll(".color-item");
     const chocoContent = document.querySelector(".cbox");
@@ -217,8 +219,19 @@ window.addEventListener("load", function () {
         msgArea.value = "";
         chocoContentCard.style.bottom = "50%";
 
+        let productObj = {
+            id: "27customize",
+            name: "客製化禮盒",
+            price: `${sum}`,
+            quantity: "1",
+            image: "news_shop.png",
+        };
+        let strObj = JSON.stringify(productObj);
+        localStorage.setItem(`27customize`, strObj);
+        sc.checkAndUpdateQuantity();
+
         setTimeout(() => {
-            this.parentNode.innerHTML = `<p>已加入購物車，感謝購買</p>`;
+            this.parentNode.innerHTML = `<p>已加入購物車，感謝購買，前往<a href="shopingCart.html">購物車</a></p>`;
             chocoContentCover.style.width = "100%";
         }, 1000);
         arrowBack.style.visibility = "hidden";

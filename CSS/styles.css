@@ -2171,7 +2171,7 @@ progress::-webkit-progress-value {
     left: 50%;
     transform: translate(-50%, 50%);
     z-index: 2;
-    background: url(/assets/Untitled/cardbg.webp) no-repeat center/cover;
+    background: url(../assets/Untitled/cardbg.webp) no-repeat center/cover;
     transition: bottom 0.7s ease-in-out;
     text-align: center;
 }
@@ -2934,6 +2934,8 @@ p span:nth-child(9) {
 
     border: 2px solid #431;
     padding: 10px 10px;
+
+    margin-bottom: 60px;
 }
 
 .carts-img {
@@ -2979,4 +2981,10 @@ input[type="number"] {
 
 .sc-btn .carts-countnum {
     padding: 5px;
+}
+
+.carts-title {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 32px;
 }

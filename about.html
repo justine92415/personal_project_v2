@@ -19,6 +19,10 @@
 
     <!-- <script defer src="./test.js"></script> -->
     <script defer src="./lazeLoading.js"></script>
+    <script type="module">
+        import { sc } from "./shoppingCart.js";
+        sc.checkAndUpdateQuantity();
+    </script>
 </head>
 
 <body>
@@ -64,7 +68,8 @@
                 </div>
                 <div class="col-3">
                     <div class="icon-group">
-                        <a href="#" class="icon-item icon-item--cart">
+                        <a href="shopingCart.html" class="icon-item icon-item--cart">
+                            <div class="current-quantity">0</div>
                             <ion-icon name="cart-outline"></ion-icon>
                         </a>
 
@@ -73,6 +78,8 @@
                         </a>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </header>
