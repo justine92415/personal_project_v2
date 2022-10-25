@@ -1,4 +1,4 @@
-import { sc } from "../shoppingCart.js";
+import { sc } from "./shoppingCart.js";
 window.addEventListener("load", function () {
     sc.checkAndUpdateQuantity();
     const sizeItems = document.querySelectorAll(".size-item");

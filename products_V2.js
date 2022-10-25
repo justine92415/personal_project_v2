@@ -1,4 +1,4 @@
-import { sc } from "../shoppingCart.js";
+import { sc } from "./shoppingCart.js";
 
 sc.checkAndUpdateQuantity();
 const rowBody = document.querySelector(".row-body");

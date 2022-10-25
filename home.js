@@ -1,6 +1,5 @@
-import { sc } from "../shoppingCart.js";
+import { sc } from "./shoppingCart.js";
 window.addEventListener("load", function () {
-    console.log("hihi");
     /* ***carts*** */
 
     sc.checkAndUpdateQuantity();
@@ -107,7 +106,6 @@ window.addEventListener("load", function () {
     // feedback
     if (this.window.innerWidth > 768) {
         limit = feedbackCard.length / 3;
-        console.log(limit);
     } else {
         limit = feedbackCard.length;
     }
