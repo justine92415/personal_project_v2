@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0"">
+    <title>購物車</title>
+    <link rel=" stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/grid.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" defer src="sc.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="row navbar">
+                <div class="col-3">
+                    <div class="logo-box">
+                        <a href="index.html">
+                            <img src="assets/LOGO.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul class="nav-group">
+                        <li class="nav-item">
+                            <a href="products.html" data-en="Products">
+                                <span class="show1">產品一覽</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customize.html" data-en="Customize">
+                                <span class="show1">客製禮盒</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" data-en="AboutUs">
+                                <span class="show1">關於我們</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="news.html" data-en="News">
+                                <span class="show1">最新資訊</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="faq.html" data-en="FAQ">
+                                <span class="show1">訂購須知</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="icon-group">
+                        <a href="#" class="icon-item icon-item--cart">
+                            <div class="current-quantity">0</div>
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a>
+
+                        <a href="#" class="icon-item icon-item--user">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="single-breadcrumbs">
+                <ol class="breadcrumbs-list">
+                    <li class="breadcrumbs-item">
+                        <a href="#">首頁</a>
+                    </li>
+
+                    <li class="breadcrumbs-item">
+                        <a href="#">購物車</a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        購物車
+                    </div>
+                </div>
+
+                <div class="row carts-body">
+                    <div class="col-12">
+                        <div class="row carts-row">
+                            <div class="col-6 carts-content">
+                                <div class="carts-img">
+                                    <img src="./assets/chocoproducts/bar_p1_img2.jpg">
+                                </div>
+                                <div class="carts-name">
+                                    聲音近日，目前教育。聲音近日，目前教育。
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="carts-price">
+                                    NT.50
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="count-btn sc-btn">
+                                    <button class="minus">
+                                        <ion-icon name="remove-outline"></ion-icon>
+                                    </button>
+                                    <input class="carts-countnum" type="number" value="1">
+                                    <button class="plus">
+                                        <ion-icon name="add-outline"></ion-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="carts-total">
+                                    NT.50
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container test">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="footer-nav">
+                        <a href="products.html">產品一覽</a>
+                        <a href="customize.html">客製禮盒</a>
+                        <a href="about.html">關於我們</a>
+                        <a href="news.html">最新資訊</a>
+                        <a href="faq.html">訂購須知</a>
+                    </nav>
+                </div>
+
+                <div class="col-12">
+                    <ul class="footer-information">
+                        <li class="footer-tel">
+                            <ion-icon class="footer-icon" name="call-outline"></ion-icon>
+                            <span class="ftest">03-425-1108</span>
+                        </li>
+                        <li class="footer-address">
+                            <ion-icon class="footer-icon" name="location-outline"></ion-icon>
+                            <span class="ftest">320桃園市中壢區復興路46號9樓</span>
+                        </li>
+                        <li class="footer-mail">
+                            <ion-icon class="footer-icon" name="mail-outline"></ion-icon>
+                            <span class="ftest">27Chocolate@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <div class="footer-ohter">
+                        <p footer-other>本網站為緯育TibaMe前端設計工程師班學員專題作品，本平台僅供學習、展示之用。</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

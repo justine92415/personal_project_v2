@@ -16,7 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <script defer src="./home.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script type="module" defer src="./home.js"> </script>
 </head>
 
 <body>
@@ -63,6 +65,7 @@
                 <div class="col-3">
                     <div class="icon-group">
                         <a href="#" class="icon-item icon-item--cart">
+                            <div class="current-quantity">0</div>
                             <ion-icon name="cart-outline"></ion-icon>
                         </a>
 
@@ -164,10 +167,10 @@
                     <div class="col-12">
                         <div class="row product-row">
                             <div class="col-12 col-md-6">
-                                <div class="product-pics">
+                                <div class="product-pics bonbon-pics">
                                     <img src="./assets/choco/bonbon_card3.jpg" alt="夾心介紹圖片1">
-                                    <img src="./assets/choco/bonbon_card2.jpg" alt="夾心介紹圖片2">
-                                    <img src="./assets/choco/bonbon_card1.jpg" alt="夾心介紹圖片3">
+                                    <img src="./assets/choco/bonbon_card2.jpg" alt="夾心介紹圖片3">
+                                    <img src="./assets/choco/bonbon_card1.jpg" alt="夾心介紹圖片2">
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
@@ -186,8 +189,8 @@
                 </div>
 
                 <div class="container card-container">
-                    <div class="row">
-                        <div class="col-6 col-md-3 card-box">
+                    <div class="row bonbons-row">
+                        <!-- <div class="col-6 col-md-3 card-box">
                             <div class="product-card">
                                 <div class="product-img">
                                     <div class="hovershow desktopshow">
@@ -430,7 +433,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -483,8 +486,8 @@
                 </div>
 
                 <div class="container card-container">
-                    <div class="row">
-                        <div class="col-6 col-md-3 card-box">
+                    <div class="row raw-row">
+                        <!-- <div class="col-6 col-md-3 card-box">
                             <div class="product-card">
                                 <div class="product-img">
                                     <div class="hovershow ">
@@ -730,7 +733,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="row">
@@ -758,29 +761,10 @@
                         </h2>
                     </div>
                 </div>
-                <!-- <div class="row polys-row">
-                    <div class="col-8 col-md-8 col-lg-10 col-xl-12">
-                        <div class="polys">
-                            <a href="about.html" class="a">
-                            </a>
-                            <p class="a-content">從草稿設計開始</p>
-                            <a href="about.html" class="b"></a>
-                            <p class="b-content">製作外殼</p>
-                            <a href="about.html" class="c"></a>
-                            <a href="about.html" class="d"></a>
-                            <a href="about.html" class="e"></a>
-                        </div>
-                    </div>
-                </div> -->
+
                 <div class="row">
                     <div class="col-12">
-                        <!-- <div class="polys">
-                            <a href="about.html" class="a"></a>
-                            <a href="about.html" class="b"></a>
-                            <a href="about.html" class="c"></a>
-                            <a href="about.html" class="d"></a>
-                            <a href="about.html" class="e"></a>
-                        </div> -->
+
                         <div class="polys">
                             <div class="poly-boxa">
                                 <a class="about-link" href="#">
@@ -834,7 +818,7 @@
                                     <img class="about-img" src="./assets/choco/story6.png" alt="">
                                 </a>
                             </div>
-                            <div class="btn-more morett">
+                            <div class="btn-more btn-more-poly">
                                 <a href="products.html">
                                     閱讀更多
                                 </a>
@@ -846,7 +830,7 @@
         </section>
 
 
-        <!--  <section class="section section-feedback">
+        <section class="section section-feedback">
             <div class="newmiddle newmiddle-feedback">
 
             </div>
@@ -859,83 +843,217 @@
                         </h2>
                     </div>
                 </div>
-                <div class="btn btn-left">
-                    <ion-icon class="icon-left" name="chevron-back-outline"></ion-icon>
-                </div>
-                <div class="btn btn-right">
-                    <ion-icon class="icon-right" name="chevron-forward-outline"></ion-icon>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <div class="feedback-card">
-                            <div class="feedback-user">
-                                <div class="user-img">
-                                    <img src="./assets/choco/fakeimg1.jpg">
-                                </div>
-                            </div>
 
-                            <div class="feedback-img">
-                                <img src="./assets/choco/feedback_1.jpg">
-                            </div>
 
-                            <div class="feedback-content">
-                                <p>原本以為會是淡淡的香氣沒想到威士忌味道還蠻濃郁的❗️和生巧克力的口感、質地很搭一定要試試看~
-                                </p>
-                            </div>
-                        </div>
+                <div class="col-12 feedback-col">
+                    <div class="btn btn-left">
+                        <ion-icon class="icon-left" name="chevron-back-outline"></ion-icon>
                     </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="feedback-card">
-                            <div class="feedback-user">
-                                <div class="user-img">
-                                    <img src="./assets/choco/fakeimg1.jpg">
-                                </div>
-                            </div>
-
-                            <div class="feedback-img">
-                                <img src="./assets//choco/feedback_2.jpg">
-                            </div>
-
-                            <div class="feedback-content">
-                                <p>手掌握-最美的星球🌍
-
-                                    是用山/海/雲的概念刻畫出
-
-                                    最美的巧克力🥰
-
-                                    #星球巧克力
-                                    #香草騎士。
-                                </p>
-                            </div>
-                        </div>
+                    <div class="btn btn-right">
+                        <ion-icon class="icon-right" name="chevron-forward-outline"></ion-icon>
                     </div>
-                    <div class="col-12 col-md-4">
-                        <div class="feedback-card">
-                            <div class="feedback-user">
-                                <div class="user-img">
-                                    <img src="./assets/choco/fakeimg1.jpg">
+                    <div class="feedback-viewbox">
+                        <div class="feedback-row">
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="feedback-img">
+                                        <img src="./assets/choco/feedback_1.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>原本以為會是淡淡的香氣沒想到威士忌味道還蠻濃郁的❗️和生巧克力的口感、質地很搭一定要試試看~
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
 
-                            <div class="feedback-img">
-                                <img src="./assets/choco/feedback_3.jpg">
+                                    <div class="feedback-img">
+                                        <img src="./assets//choco/feedback_2.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>手掌握-最美的星球🌍
+
+                                            是用山/海/雲的概念刻畫出
+
+                                            最美的巧克力🥰
+
+                                            #星球巧克力
+                                            #香草騎士。
+
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
 
-                            <div class="feedback-content">
-                                <p>每一款巧克力
-                                    都是不一樣的口味搭配星球圖案
-                                    喜歡酒感的巧克力
-                                    也很多可以選擇👍
-                                </p>
+                                    <div class="feedback-img">
+                                        <img src="./assets/choco/feedback_3.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>每一款巧克力
+                                            都是不一樣的口味搭配星球圖案
+                                            喜歡酒感的巧克力
+                                            也很多可以選擇👍
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="feedback-img">
+                                        <img src="./assets/choco/feedback_1.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>原本以為會是淡淡的香氣沒想到威士忌味道還蠻濃郁的❗️和生巧克力的口感、質地很搭一定要試試看~
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="feedback-img">
+                                        <img src="./assets//choco/feedback_2.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>手掌握-最美的星球🌍
+
+                                            是用山/海/雲的概念刻畫出
+
+                                            最美的巧克力🥰
+
+                                            #星球巧克力
+                                            #香草騎士。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="feedback-img">
+                                        <img src="./assets/choco/feedback_3.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>每一款巧克力
+                                            都是不一樣的口味搭配星球圖案
+                                            喜歡酒感的巧克力
+                                            也很多可以選擇👍
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="feedback-img">
+                                        <img src="./assets/choco/feedback_1.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>原本以為會是淡淡的香氣沒想到威士忌味道還蠻濃郁的❗️和生巧克力的口感、質地很搭一定要試試看~
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="feedback-img">
+                                        <img src="./assets//choco/feedback_2.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>手掌握-最美的星球🌍
+
+                                            是用山/海/雲的概念刻畫出
+
+                                            最美的巧克力🥰
+
+                                            #星球巧克力
+                                            #香草騎士。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 feedback-card-box">
+                                <div class="feedback-card">
+                                    <div class="feedback-user">
+                                        <div class="user-img">
+                                            <img src="./assets/choco/fakeimg1.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="feedback-img">
+                                        <img src="./assets/choco/feedback_3.jpg">
+                                    </div>
+
+                                    <div class="feedback-content">
+                                        <p>每一款巧克力
+                                            都是不一樣的口味搭配星球圖案
+                                            喜歡酒感的巧克力
+                                            也很多可以選擇👍
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
-        <!-- <section class="section section-news">
+        <section class="section section-news">
             <div class="newmiddle">
 
             </div>
@@ -948,8 +1066,8 @@
                         </h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
+                <div class="row news-row">
+                    <div class="col-12 col-md-10 col-lg-8">
                         <div class="news-box">
                             <div class="news-date">
                                 2022.09.18
@@ -967,7 +1085,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12 col-md-10 col-lg-8">
                         <div class="news-box">
                             <div class="news-date">
                                 2022.09.18
@@ -985,7 +1103,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12 col-md-10 col-lg-8">
                         <div class="news-box">
                             <div class="news-date">
                                 2022.09.18
@@ -1002,15 +1120,23 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12">
-                        <div class="more">
-                            <a href="news.html">查看全部</a>
-                        </div>
+                </div>
+                <div class="col-12">
+                    <div class="btn-more">
+                        <a href="news.html">查看全部</a>
                     </div>
                 </div>
+                <div class="geometry geometry-square">
+                    <img src="./assets/Untitled/Rectangle.png" alt="裝飾用背景圖案(方形)">
+                </div>
+                <div class="geometry geometry-circle">
+                    <img src="./assets/Untitled/Ellipse.png" alt="裝飾用背景圖案(圓形)">
+                </div>
+                <div class="geometry geometry-triangle">
+                    <img src="./assets/Untitled/Polygon.png" alt="裝飾用背景圖案(三角形)">
+                </div>
             </div>
-        </section> -->
+        </section>
     </main>
 
     <footer class="footer">

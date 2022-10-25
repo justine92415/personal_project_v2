@@ -1,3 +1,4 @@
+import { sc } from "../shoppingCart.js";
 // 獲取產品卡片容器
 const rowBody = document.querySelector(".row-body");
 // 獲取所有產品分類

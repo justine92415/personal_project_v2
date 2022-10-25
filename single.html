@@ -16,7 +16,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script defer src="./single.js"></script>
+    <script type="module" defer src="./single.js"></script>
 </head>
 
 <body>
@@ -63,6 +63,7 @@
                 <div class="col-3">
                     <div class="icon-group">
                         <a href="#" class="icon-item icon-item--cart">
+                            <div class="current-quantity">0</div>
                             <ion-icon name="cart-outline"></ion-icon>
                         </a>
 
@@ -91,7 +92,7 @@
                     <li class="breadcrumbs-item">
                         <a href="#">產品一覽</a>
                     </li>
-                    <li class="breadcrumbs-item">
+                    <li class="breadcrumbs-item breadcrumbs-current">
                         <a href="#">星球巧克力(12顆入)</a>
                     </li>
                 </ol>
@@ -100,9 +101,11 @@
 
             <div class="container">
                 <div class="row">
+                    <div class="loader"></div>
                     <div class="col-12 col-md-6 single-imgs">
                         <div class="single-main">
-                            <img src="#" alt="">
+
+                            <img src="" alt="">
                             <!-- <img src="./assets/choco/bonbon_product5.jpg" alt=""> -->
                         </div>
                         <div class="single-sub">
@@ -129,7 +132,7 @@
                     <div class="col-12 col-md-6 single-head">
                         <div class="single-name">
                             <h2>
-                                星球巧克力(12顆入)
+                                <!-- 星球巧克力(12顆入) -->
                             </h2>
                         </div>
 
@@ -144,14 +147,15 @@
                             </ion-icon>
                             <ion-icon class="single-star" name="star">
                             </ion-icon>
-                            <span class="single-quantity">&nbsp;9則評價</span>
+                            <span class="single-quantity">&nbsp;則評價</span>
                         </div>
 
                         <div class="single-description">
-                            <p><!-- 浩瀚無垠的宇宙到不了盡知的那天，於是獻上一幅浪漫的星空，
+                            <p>
+                                <!-- 浩瀚無垠的宇宙到不了盡知的那天，於是獻上一幅浪漫的星空，
                                 展開探索美味的旅程行李有點多，因為裝了過多的濃郁、滿滿的甜蜜、
                                 些許的香醇和微微的苦澀和人生一樣，可能不是完美極致，但是精采絕倫 -->
-                                
+
                             </p>
                         </div>
                         <div class="single-countbox">
@@ -196,7 +200,7 @@
                                 </button>
                             </div>
                             <div class="bag-img">
-                                <img src="https://picsum.photos/300/200/?random=10">
+                                <img src="./assets/choco/beg.jpg">
                             </div>
                         </div>
                     </div>
@@ -467,146 +471,148 @@
                         </div>
                     </div>
 
-                    <div class="col-3">
-                        <div class="product-card">
-                            <div class="product-img">
-                                <div class="hovershow ">
-                                    <p class="hovershow__name">bonbon巧克力(4入)</p>
-                                    <span class="hovershow__div"></span>
-                                    <p class="hovershow__price">NT.300</p>
-                                    <p class="hovershow__description">
-                                        請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                    </p>
-                                    <div class="hovershow__carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="text" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
+                    <div class="row row-body">
+                        <div class="col-3">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">bonbon巧克力(4入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.300</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="text" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                                <img src="./assets/choco/bonbon_product1.jpg">
+                                    <img src="./assets/choco/bonbon_product1.jpg">
 
-                            </div>
-
-                            <div class="product-content">
-                                <div class="viewlink">
-                                    <a href="single.html">詳細介紹</a>
                                 </div>
-                                <div class="product-name">bonbon巧克力(4入)</div>
-                                <div class="product-price">NT.300</div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">bonbon巧克力(4入)</div>
+                                    <div class="product-price">NT.300</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-card">
-                            <div class="product-img">
-                                <div class="hovershow ">
-                                    <p class="hovershow__name">bonbon巧克力(9入)</p>
-                                    <span class="hovershow__div"></span>
-                                    <p class="hovershow__price">NT.600</p>
-                                    <p class="hovershow__description">
-                                        請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                    </p>
-                                    <div class="hovershow__carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
+                        <div class="col-3">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">bonbon巧克力(9入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.600</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                                <img src="./assets/choco/bonbon_product2.webp">
+                                    <img src="./assets/choco/bonbon_product2.webp">
 
-                            </div>
-
-                            <div class="product-content">
-                                <div class="viewlink">
-                                    <a href="single.html">詳細介紹</a>
                                 </div>
-                                <div class="product-name">bonbon巧克力(9入)</div>
-                                <div class="product-price">NT.600</div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">bonbon巧克力(9入)</div>
+                                    <div class="product-price">NT.600</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-card">
-                            <div class="product-img">
-                                <div class="hovershow ">
-                                    <p class="hovershow__name">bonbon巧克力(12入)</p>
-                                    <span class="hovershow__div"></span>
-                                    <p class="hovershow__price">NT.900</p>
-                                    <p class="hovershow__description">
-                                        請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                    </p>
-                                    <div class="hovershow__carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
+                        <div class="col-3">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">bonbon巧克力(12入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.900</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-                                <img src="./assets/choco/bonbon_product3.webp">
+                                    <img src="./assets/choco/bonbon_product3.webp">
 
-                            </div>
-
-                            <div class="product-content">
-                                <div class="viewlink">
-                                    <a href="single.html">詳細介紹</a>
                                 </div>
-                                <div class="product-name">bonbon巧克力(12入)</div>
-                                <div class="product-price">NT.900</div>
+
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">bonbon巧克力(12入)</div>
+                                    <div class="product-price">NT.900</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="product-card">
-                            <div class="product-img">
-                                <div class="hovershow ">
-                                    <p class="hovershow__name">bonbon巧克力(24入)</p>
-                                    <span class="hovershow__div"></span>
-                                    <p class="hovershow__price">NT.1800</p>
-                                    <p class="hovershow__description">
-                                        請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                    </p>
-                                    <div class="hovershow__carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
+                        <div class="col-3">
+                            <div class="product-card">
+                                <div class="product-img">
+                                    <div class="hovershow ">
+                                        <p class="hovershow__name">bonbon巧克力(24入)</p>
+                                        <span class="hovershow__div"></span>
+                                        <p class="hovershow__price">NT.1800</p>
+                                        <p class="hovershow__description">
+                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
+                                        </p>
+                                        <div class="hovershow__carts">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
+                                            </button>
+                                            <input class="carts__num" type="number" min="1" max="99" value="1">
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
+                                            </button>
+                                            <button class="carts__btn">
+                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
+                                            </button>
+                                        </div>
                                     </div>
+                                    <img src="./assets/choco/bonbon_product4.webp">
                                 </div>
-                                <img src="./assets/choco/bonbon_product4.webp">
-                            </div>
 
-                            <div class="product-content">
-                                <div class="viewlink">
-                                    <a href="single.html">詳細介紹</a>
+                                <div class="product-content">
+                                    <div class="viewlink">
+                                        <a href="single.html">詳細介紹</a>
+                                    </div>
+                                    <div class="product-name">bonbon巧克力(24入)</div>
+                                    <div class="product-price">NT.1800</div>
                                 </div>
-                                <div class="product-name">bonbon巧克力(24入)</div>
-                                <div class="product-price">NT.1800</div>
                             </div>
                         </div>
                     </div>
