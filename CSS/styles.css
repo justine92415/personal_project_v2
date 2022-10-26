@@ -139,7 +139,6 @@ header {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    /* background-color: #e15a5a; */
     position: absolute;
     top: 0%;
     left: 55%;
@@ -459,6 +458,11 @@ main {
     font-weight: 700;
     color: #443311;
 }
+@media screen and (min-width: 768px) {
+    .section-title {
+        font-size: 30px;
+    }
+}
 
 .product-row {
     gap: 100px;
@@ -561,7 +565,7 @@ main {
 .product-category h3 {
     text-align: center;
     font-size: 18px;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
     color: #443311;
 }
 
@@ -575,6 +579,21 @@ main {
     text-align: center;
     /* margin-top: 3rem; */
 }
+
+@media screen and (min-width: 768px) {
+    .product-category h3 {
+        text-align: center;
+        font-size: 26px;
+    }
+    .product-description {
+        font-size: 24px;
+    }
+    .btn-more {
+        margin-top: 3rem;
+    }
+}
+
+
 
 .btn-more a {
     display: inline-block;
