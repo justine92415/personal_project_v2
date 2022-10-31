@@ -1,4 +1,4 @@
-const currentCartQuantity = document.querySelector(".current-quantity");
+const currentCartQuantity = document.querySelectorAll(".current-quantity");
 class shoppingCart {
     constructor(curQuantity) {
         this.curQuantity = curQuantity;
@@ -27,7 +27,11 @@ class shoppingCart {
     }
 
     checkAndUpdateQuantity() {
-        currentCartQuantity.innerText = localStorage.length;
+        /*    currentCartQuantity[0].innerText = localStorage.length;
+        currentCartQuantity[1].innerText = localStorage.length; */
+        currentCartQuantity.forEach((ccq) => {
+            ccq.innerText = localStorage.length;
+        });
     }
 
     addToLocalStorage(obj, quantity) {

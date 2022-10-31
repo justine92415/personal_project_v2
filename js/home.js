@@ -260,7 +260,7 @@ window.addEventListener("load", function () {
                             </div>
                             
                             <a href="single.html?id=${id}">
-                            <img src="./assets/chocoproducts/${image}">
+                            <img src="./assets/chocoproducts/${image}" alt="商品圖片">
                             </a>
                         </div>
     

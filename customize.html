@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>客製禮盒</title>
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/grid.css">
     <link rel="stylesheet" href="./CSS/styles.css">
@@ -21,7 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <script type="module" defer src="./customize.js"></script>
+    <script type="module" defer src="./js/customize.js"></script>
+    <script defer src="./js/menu.js"></script>
 
 
 </head>
@@ -34,11 +35,11 @@
                 <div class="col-3">
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="assets/LOGO.png" alt="">
+                            <img src="assets/LOGO.png" alt="商標圖案">
                         </a>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <ul class="nav-group">
                         <li class="nav-item">
                             <a href="products.html" data-en="Products">
@@ -67,7 +68,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <div class="icon-group">
                         <a href="shopingCart.html" class="icon-item icon-item--cart">
                             <div class="current-quantity">0</div>
@@ -79,8 +80,41 @@
                         </a>
                     </div>
                 </div>
+                <div class="col-3 menu-box">
+                    <div class="btn-menu">
+                        <ion-icon class="icon-menu icon-active" name="menu-outline"></ion-icon>
+                        <ion-icon class="icon-close" name="close-outline"></ion-icon>
+                    </div>
 
+                </div>
+                <div class="menu-content ">
+                    <div class="menu-item">
+                        <a href="products.html">產品一覽</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="customize.html">客製禮盒</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="about.html">關於我們</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="news.html">最新資訊</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="faq.html">訂購須知</a>
+                    </div>
 
+                    <div class="menu-item ">
+                        <a href="shopingCart.html" class="icon-item icon-item--cart">
+                            <div class="current-quantity">0</div>
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a>
+
+                        <a href="#" class="icon-item icon-item--user">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -107,7 +141,7 @@
             <div class="products-breadcrumbs">
                 <ol class="breadcrumbs-list">
                     <li class="breadcrumbs-item">
-                        <a href="#">首頁</a>
+                        <a href="index.html">首頁</a>
                     </li>
 
                     <li class="breadcrumbs-item">
@@ -199,6 +233,7 @@
                             </div>
                             <div class="step customize-choco">
                                 <p>3.選擇巧克力</p>
+                                <p class="customize-hinit">拖曳或點擊下方巧克力可加入至禮盒中</p>
                                 <div class="choco-box">
                                     <h2 class="choco-category">店長推薦</h2>
                                     <div class="row choco-row">

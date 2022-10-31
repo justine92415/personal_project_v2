@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
-    <title>Document</title>
+    <title>首頁</title>
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/grid.css">
     <link rel="stylesheet" href="./CSS/styles.css">
@@ -18,7 +18,9 @@
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script type="module" defer src="./home.js"> </script>
+    <script type="module" defer src="./js/home.js"> </script>
+    <script defer src="./js/menu.js"></script>
+
 </head>
 
 <body>
@@ -29,11 +31,11 @@
                 <div class="col-3">
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="assets/LOGO.png" alt="">
+                            <img src="assets/LOGO.png" alt="商標圖案">
                         </a>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <ul class="nav-group">
                         <li class="nav-item">
                             <a href="products.html" data-en="Products">
@@ -62,7 +64,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <div class="icon-group">
                         <a href="shopingCart.html" class="icon-item icon-item--cart">
                             <div class="current-quantity">0</div>
@@ -74,8 +76,41 @@
                         </a>
                     </div>
                 </div>
+                <div class="col-3 menu-box">
+                    <div class="btn-menu">
+                        <ion-icon class="icon-menu icon-active" name="menu-outline"></ion-icon>
+                        <ion-icon class="icon-close" name="close-outline"></ion-icon>
+                    </div>
 
+                </div>
+                <div class="menu-content ">
+                    <div class="menu-item">
+                        <a href="products.html">產品一覽</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="customize.html">客製禮盒</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="about.html">關於我們</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="news.html">最新資訊</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="faq.html">訂購須知</a>
+                    </div>
 
+                    <div class="menu-item ">
+                        <a href="shopingCart.html" class="icon-item icon-item--cart">
+                            <div class="current-quantity">0</div>
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </a>
+
+                        <a href="#" class="icon-item icon-item--user">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -190,250 +225,7 @@
 
                 <div class="container card-container">
                     <div class="row bonbons-row">
-                        <!-- <div class="col-6 col-md-3 card-box">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <div class="hovershow desktopshow">
-                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
-                                        <span class="hovershow__div"></span>
-                                        <p class="hovershow__price">NT.750</p>
-                                        <p class="hovershow__description">
-                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                        </p>
-                                        <div class="hovershow__carts">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                            </button>
-                                            <input class="carts__num" type="number" min="1" max="99" value="1">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                            </button>
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <img src="./assets/choco/raw_product1.jpg">
-                                    </a>
-                                </div>
 
-
-                                <div class="product-content">
-
-
-                                    <div class="viewlink">
-                                        <a href="single.html">詳細介紹</a>
-                                    </div>
-                                    <div class="product-name">抹茶生巧克力(20入)</div>
-                                    <div class="product-price">
-                                        <span class="rating">
-                                            <ion-icon item-start class="star" name="star">
-                                            </ion-icon>
-                                            4.6 (23)
-                                        </span>
-                                        NT.750
-                                    </div>
-
-                                    <div class="mb-carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline">
-                                            </ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 card-box">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <div class="hovershow ">
-                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
-                                        <span class="hovershow__div"></span>
-                                        <p class="hovershow__price">NT.750</p>
-                                        <p class="hovershow__description">
-                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                        </p>
-                                        <div class="hovershow__carts">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                            </button>
-                                            <input class="carts__num" type="number" min="1" max="99" value="1">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                            </button>
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <img src="./assets/choco/raw_product1.jpg">
-                                    </a>
-                                </div>
-
-
-                                <div class="product-content">
-
-
-                                    <div class="viewlink">
-                                        <a href="single.html">詳細介紹</a>
-                                    </div>
-                                    <div class="product-name">抹茶生巧克力(20入)</div>
-                                    <div class="product-price">
-                                        <span class="rating">
-                                            <ion-icon item-start class="star" name="star">
-                                            </ion-icon>
-                                            4.6 (23)
-                                        </span>
-                                        NT.750
-                                    </div>
-
-                                    <div class="mb-carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline">
-                                            </ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 card-box">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <div class="hovershow desktopshow">
-                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
-                                        <span class="hovershow__div"></span>
-                                        <p class="hovershow__price">NT.750</p>
-                                        <p class="hovershow__description">
-                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                        </p>
-                                        <div class="hovershow__carts">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                            </button>
-                                            <input class="carts__num" type="number" min="1" max="99" value="1">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                            </button>
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <img src="./assets/choco/raw_product1.jpg">
-                                    </a>
-                                </div>
-
-
-                                <div class="product-content">
-
-
-                                    <div class="viewlink">
-                                        <a href="single.html">詳細介紹</a>
-                                    </div>
-                                    <div class="product-name">抹茶生巧克力(20入)</div>
-                                    <div class="product-price">
-                                        <span class="rating">
-                                            <ion-icon item-start class="star" name="star">
-                                            </ion-icon>
-                                            4.6 (23)
-                                        </span>
-                                        NT.750
-                                    </div>
-
-                                    <div class="mb-carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline">
-                                            </ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3 card-box">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <div class="hovershow desktopshow">
-                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
-                                        <span class="hovershow__div"></span>
-                                        <p class="hovershow__price">NT.750</p>
-                                        <p class="hovershow__description">
-                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                        </p>
-                                        <div class="hovershow__carts">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                            </button>
-                                            <input class="carts__num" type="number" min="1" max="99" value="1">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                            </button>
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <img src="./assets/choco/raw_product1.jpg">
-                                    </a>
-                                </div>
-
-
-                                <div class="product-content">
-
-
-                                    <div class="viewlink">
-                                        <a href="single.html">詳細介紹</a>
-                                    </div>
-                                    <div class="product-name">抹茶生巧克力(20入)</div>
-                                    <div class="product-price">
-                                        <span class="rating">
-                                            <ion-icon item-start class="star" name="star">
-                                            </ion-icon>
-                                            4.6 (23)
-                                        </span>
-                                        NT.750
-                                    </div>
-
-                                    <div class="mb-carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline">
-                                            </ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 
@@ -466,9 +258,9 @@
                         <div class="row row-reverse product-row">
                             <div class="col-12 col-md-6">
                                 <div class="product-pics raw-pics">
-                                    <img src="./assets/choco/raw_card3.jpg">
-                                    <img src="./assets/choco/raw_card2.jpg">
-                                    <img src="./assets/choco/raw_card1.jpg">
+                                    <img src="./assets/choco/raw_card3.jpg" alt="生巧克力介紹圖片1">
+                                    <img src="./assets/choco/raw_card2.jpg" alt="生巧克力介紹圖片3">
+                                    <img src="./assets/choco/raw_card1.jpg" alt="生巧克力介紹圖片2">
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
@@ -487,253 +279,7 @@
 
                 <div class="container card-container">
                     <div class="row raw-row">
-                        <!-- <div class="col-6 col-md-3 card-box">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <div class="hovershow ">
-                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
-                                        <span class="hovershow__div"></span>
-                                        <p class="hovershow__price">NT.750</p>
-                                        <p class="hovershow__description">
-                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                        </p>
-                                        <div class="hovershow__carts">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                            </button>
-                                            <input class="carts__num" type="number" min="1" max="99" value="1">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                            </button>
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <img src="./assets/choco/raw_product1.jpg">
-                                    </a>
-                                </div>
 
-
-                                <div class="product-content">
-
-
-                                    <div class="viewlink">
-                                        <a href="single.html">詳細介紹</a>
-                                    </div>
-                                    <div class="product-name">抹茶生巧克力(20入)</div>
-                                    <div class="product-price">
-                                        <span class="rating">
-                                            <ion-icon item-start class="star" name="star">
-                                            </ion-icon>
-                                            4.6 (23)
-                                        </span>
-                                        NT.750
-                                    </div>
-
-                                    <div class="mb-carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline">
-                                            </ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-md-3 card-box">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <div class="hovershow ">
-                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
-                                        <span class="hovershow__div"></span>
-                                        <p class="hovershow__price">NT.750</p>
-                                        <p class="hovershow__description">
-                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                        </p>
-                                        <div class="hovershow__carts">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                            </button>
-                                            <input class="carts__num" type="number" min="1" max="99" value="1">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                            </button>
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <img src="./assets/choco/raw_product1.jpg">
-                                    </a>
-                                </div>
-
-
-                                <div class="product-content">
-
-
-                                    <div class="viewlink">
-                                        <a href="single.html">詳細介紹</a>
-                                    </div>
-                                    <div class="product-name">抹茶生巧克力(20入)</div>
-                                    <div class="product-price">
-                                        <span class="rating">
-                                            <ion-icon item-start class="star" name="star">
-                                            </ion-icon>
-                                            4.6 (23)
-                                        </span>
-                                        NT.750
-                                    </div>
-
-                                    <div class="mb-carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline">
-                                            </ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-md-3 card-box">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <div class="hovershow ">
-                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
-                                        <span class="hovershow__div"></span>
-                                        <p class="hovershow__price">NT.750</p>
-                                        <p class="hovershow__description">
-                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                        </p>
-                                        <div class="hovershow__carts">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                            </button>
-                                            <input class="carts__num" type="number" min="1" max="99" value="1">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                            </button>
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <img src="./assets/choco/raw_product1.jpg">
-                                    </a>
-                                </div>
-
-
-                                <div class="product-content">
-
-
-                                    <div class="viewlink">
-                                        <a href="single.html">詳細介紹</a>
-                                    </div>
-                                    <div class="product-name">抹茶生巧克力(20入)</div>
-                                    <div class="product-price">
-                                        <span class="rating">
-                                            <ion-icon item-start class="star" name="star">
-                                            </ion-icon>
-                                            4.6 (23)
-                                        </span>
-                                        NT.750
-                                    </div>
-
-                                    <div class="mb-carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline">
-                                            </ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-md-3 card-box">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <div class="hovershow ">
-                                        <p class="hovershow__name">抹茶生巧克力(20入)</p>
-                                        <span class="hovershow__div"></span>
-                                        <p class="hovershow__price">NT.750</p>
-                                        <p class="hovershow__description">
-                                            請教小子教師群發有關部門體制內部文檔達到美麗美元公路以下，更加鈴聲下載生態靈魂品質一段背後同步男性。
-                                        </p>
-                                        <div class="hovershow__carts">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                            </button>
-                                            <input class="carts__num" type="number" min="1" max="99" value="1">
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__minus" name="add-outline"></ion-icon>
-                                            </button>
-                                            <button class="carts__btn">
-                                                <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <img src="./assets/choco/raw_product1.jpg">
-                                    </a>
-                                </div>
-
-
-                                <div class="product-content">
-
-
-                                    <div class="viewlink">
-                                        <a href="single.html">詳細介紹</a>
-                                    </div>
-                                    <div class="product-name">抹茶生巧克力(20入)</div>
-                                    <div class="product-price">
-                                        <span class="rating">
-                                            <ion-icon item-start class="star" name="star">
-                                            </ion-icon>
-                                            4.6 (23)
-                                        </span>
-                                        NT.750
-                                    </div>
-
-                                    <div class="mb-carts">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__plus" name="remove-outline"></ion-icon>
-                                        </button>
-                                        <input class="carts__num" type="number" min="1" max="99" value="1">
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__minus" name="add-outline">
-                                            </ion-icon>
-                                        </button>
-                                        <button class="carts__btn">
-                                            <ion-icon class="btn__carts" name="cart-outline"></ion-icon>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="row">
@@ -768,7 +314,7 @@
                         <div class="polys">
                             <div class="poly-boxa">
                                 <a class="about-link" href="#">
-                                    <img class="about-img" src="./assets/choco/draw.png" alt="">
+                                    <img class="about-img" src="./assets/choco/draw.png" alt="關於我們-畫草稿">
                                 </a>
                                 <div class="about-description ">
                                     <span>從</span>
@@ -780,7 +326,7 @@
                             </div>
                             <div class="poly-boxb">
                                 <a class="about-link" href="#">
-                                    <img class="about-img" src="./assets/choco/story2.png" alt="">
+                                    <img class="about-img" src="./assets/choco/story2.png" alt="關於我們-製作外殼">
                                 </a>
                                 <div class="about-description ">
                                     <span>製</span>
@@ -791,7 +337,7 @@
                             </div>
                             <div class="poly-boxc">
                                 <a class="about-link" href="#">
-                                    <img class="about-img" src="./assets/choco/story4.png" alt="">
+                                    <img class="about-img" src="./assets/choco/story4.png" alt="關於我們-調溫">
                                 </a>
                                 <div class="about-description">
                                     <span>調</span>
@@ -810,16 +356,16 @@
                                     <span>巧克力</span>
                                 </div>
                                 <a class="about-link" href="#">
-                                    <img class="about-img" src="./assets/choco/story5.png" alt="">
+                                    <img class="about-img" src="./assets/choco/story5.png" alt="關於我們-巧克力成品">
                                 </a>
                             </div>
                             <div class="poly-boxe">
                                 <a class="about-link" href="#">
-                                    <img class="about-img" src="./assets/choco/story6.png" alt="">
+                                    <img class="about-img" src="./assets/choco/story6.png" alt="關於我們-包裝">
                                 </a>
                             </div>
                             <div class="btn-more btn-more-poly">
-                                <a href="products.html">
+                                <a href="about.html">
                                     閱讀更多
                                 </a>
                             </div>
@@ -858,12 +404,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets/choco/feedback_1.jpg">
+                                        <img src="./assets/choco/feedback_1.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">
@@ -876,12 +422,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets//choco/feedback_2.jpg">
+                                        <img src="./assets//choco/feedback_2.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">
@@ -902,12 +448,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets/choco/feedback_3.jpg">
+                                        <img src="./assets/choco/feedback_3.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">
@@ -923,12 +469,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets/choco/feedback_1.jpg">
+                                        <img src="./assets/choco/feedback_1.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">
@@ -941,12 +487,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets//choco/feedback_2.jpg">
+                                        <img src="./assets//choco/feedback_2.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">
@@ -966,12 +512,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets/choco/feedback_3.jpg">
+                                        <img src="./assets/choco/feedback_3.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">
@@ -987,12 +533,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets/choco/feedback_1.jpg">
+                                        <img src="./assets/choco/feedback_1.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">
@@ -1005,12 +551,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets//choco/feedback_2.jpg">
+                                        <img src="./assets//choco/feedback_2.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">
@@ -1030,12 +576,12 @@
                                 <div class="feedback-card">
                                     <div class="feedback-user">
                                         <div class="user-img">
-                                            <img src="./assets/choco/fakeimg1.jpg">
+                                            <img src="./assets/choco/fakeimg1.jpg" alt="評論頭貼">
                                         </div>
                                     </div>
 
                                     <div class="feedback-img">
-                                        <img src="./assets/choco/feedback_3.jpg">
+                                        <img src="./assets/choco/feedback_3.jpg" alt="評論照片">
                                     </div>
 
                                     <div class="feedback-content">

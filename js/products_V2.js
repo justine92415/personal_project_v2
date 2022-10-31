@@ -189,7 +189,9 @@ function getAjaxData(reqUrl) {
                                     </button>
                                 </div>
                             </div>
+                            <a href="single.html?id=${choco.id}">
                             <img src="./assets/chocoproducts/${choco.images[0]}">
+                            </a>
                         </div>
     
     

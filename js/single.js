@@ -23,10 +23,6 @@ window.addEventListener("load", function () {
     let curNum = +countNum.value;
     console.log(localStorage.length);
 
-    /* for (let i = 0; i < localStorage.length; i++) {
-        console.log(localStorage.getItem(localStorage.key(i)));
-    } */
-
     addEventListener("storage", (event) => {
         console.log("sotrage!!");
     });
@@ -53,6 +49,7 @@ window.addEventListener("load", function () {
     axios.get(`${apiURL}${singleId}`).then(function (res) {
         document.querySelector(".loader").style.display = "none";
         const { tour } = res.data.dtat;
+        document.title = tour.name;
         breadcrumbsCurrent.innerHTML = `&nbsp&nbsp>&nbsp&nbsp${tour.name}`;
         singleMain.src = `./assets/chocoproducts/${tour.images[0]}`;
         singlesub.forEach((sub, index) => {
