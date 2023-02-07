@@ -1,38 +1,39 @@
-import { sc } from "./shoppingCart.js";
+import { sc } from './shoppingCart.js';
 
-window.addEventListener("load", function () {
+window.addEventListener('load', function () {
     sc.checkAndUpdateQuantity();
-    const breadcrumbsCurrent = document.querySelector(".breadcrumbs-current");
-    const singleId = location.search.split("=")[1];
-    const singleMain = document.querySelector(".single-main img");
-    const singlesub = document.querySelectorAll(".single-sub img");
-    const singleName = document.querySelector(".single-name h2");
-    const singleQuantitys = document.querySelectorAll(".single-quantity");
-    const singleDescription = document.querySelector(".single-description p");
-    const price = document.querySelector(".price");
-    const total = document.querySelector(".total");
-    const countNum = document.querySelector(".single-countnum");
-    const minus = document.querySelector(".minus");
-    const plus = document.querySelector(".plus");
+    const breadcrumbsCurrent = document.querySelector('.breadcrumbs-current');
+    const singleId = location.search.split('=')[1];
+    const singleMain = document.querySelector('.single-main img');
+    const singlesub = document.querySelectorAll('.single-sub img');
+    const singleName = document.querySelector('.single-name h2');
+    const singleQuantitys = document.querySelectorAll('.single-quantity');
+    const singleDescription = document.querySelector('.single-description p');
+    const price = document.querySelector('.price');
+    const total = document.querySelector('.total');
+    const countNum = document.querySelector('.single-countnum');
+    const minus = document.querySelector('.minus');
+    const plus = document.querySelector('.plus');
 
-    const addToCart = document.querySelector(".single-addcart");
-    const otherBody = document.querySelector(".row-body");
+    const addToCart = document.querySelector('.single-addcart');
+    const otherBody = document.querySelector('.row-body');
 
-    let apiURL = "https://learnnodejs-3s6rmmfxwq-de.a.run.app/api/v1/tours/";
+    // let apiURL = "https://learnnodejs-3s6rmmfxwq-de.a.run.app/api/v1/tours/";
+    let apiURL = 'https://27api.fly.dev/api/v1/tours/';
 
     let curNum = +countNum.value;
     console.log(localStorage.length);
 
-    addEventListener("storage", (event) => {
-        console.log("sotrage!!");
+    addEventListener('storage', (event) => {
+        console.log('sotrage!!');
     });
 
-    countNum.addEventListener("input", (e) => {
+    countNum.addEventListener('input', (e) => {
         curNum = +e.target.value;
         total.innerText = `${+price.innerText * curNum}`;
     });
 
-    minus.addEventListener("click", (e) => {
+    minus.addEventListener('click', (e) => {
         if (+countNum.value !== 1) {
             curNum -= 1;
             countNum.value = curNum;
@@ -40,21 +41,21 @@ window.addEventListener("load", function () {
         }
     });
 
-    plus.addEventListener("click", (e) => {
+    plus.addEventListener('click', (e) => {
         curNum += 1;
         countNum.value = curNum;
         total.innerText = `${+price.innerText * curNum}`;
     });
 
     axios.get(`${apiURL}${singleId}`).then(function (res) {
-        document.querySelector(".loader").style.display = "none";
+        document.querySelector('.loader').style.display = 'none';
         const { tour } = res.data.dtat;
         document.title = tour.name;
         breadcrumbsCurrent.innerHTML = `&nbsp&nbsp>&nbsp&nbsp${tour.name}`;
         singleMain.src = `./assets/chocoproducts/${tour.images[0]}`;
         singlesub.forEach((sub, index) => {
             sub.src = `./assets/chocoproducts/${tour.images[index]}`;
-            sub.addEventListener("click", (e) => {
+            sub.addEventListener('click', (e) => {
                 console.log(e.target);
                 singleMain.src = e.target.src;
             });
@@ -67,7 +68,7 @@ window.addEventListener("load", function () {
         price.innerText = `${tour.price}`;
         total.innerText = `${tour.price * curNum}`;
 
-        addToCart.addEventListener("click", () => {
+        addToCart.addEventListener('click', () => {
             let productObj = {
                 id: tour.id,
                 name: tour.name,
@@ -106,20 +107,20 @@ window.addEventListener("load", function () {
                 sc.getAllCartElement();
 
             btnPlus.forEach((btnPmb, index) => {
-                btnPmb.addEventListener("click", function () {
+                btnPmb.addEventListener('click', function () {
                     let quantity = +inputQuantityMobile[index].value;
                     inputQuantityMobile[index].value = quantity + 1;
                 });
             });
             btnMinus.forEach((btnMmb, index) => {
-                btnMmb.addEventListener("click", function () {
+                btnMmb.addEventListener('click', function () {
                     let quantity = +inputQuantityMobile[index].value;
                     if (quantity === 1) return;
                     inputQuantityMobile[index].value = quantity - 1;
                 });
             });
             btnTocarts.forEach((btnCart, index) => {
-                btnCart.addEventListener("click", function () {
+                btnCart.addEventListener('click', function () {
                     let quantity = +inputQuantityMobile[index].value;
                     sc.addToLocalStorage(tours[index], quantity);
                 });

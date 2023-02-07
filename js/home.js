@@ -1,36 +1,36 @@
-import { sc } from "./shoppingCart.js";
-window.addEventListener("load", function () {
+import { sc } from './shoppingCart.js';
+window.addEventListener('load', function () {
     /* ***carts*** */
 
     sc.checkAndUpdateQuantity();
 
     /* ***banner*** */
-    const sliderImgList = document.querySelector(".slider-imglist");
-    const sliderImgItem = document.querySelectorAll(".slider-imgitem");
-    const dotGroup = document.querySelector(".dot-group");
+    const sliderImgList = document.querySelector('.slider-imglist');
+    const sliderImgItem = document.querySelectorAll('.slider-imgitem');
+    const dotGroup = document.querySelector('.dot-group');
     let dots;
     let curImg = 1;
 
     /* ***feedback*** */
-    const btnLeft = document.querySelector(".btn-left");
-    const btnRight = document.querySelector(".btn-right");
-    const feedbackRrow = document.querySelector(".feedback-row");
-    const feedbackCard = document.querySelectorAll(".feedback-card");
+    const btnLeft = document.querySelector('.btn-left');
+    const btnRight = document.querySelector('.btn-right');
+    const feedbackRrow = document.querySelector('.feedback-row');
+    const feedbackCard = document.querySelectorAll('.feedback-card');
     let curFeedback = 0;
     let limit;
 
     /* ***interSectionOberserve*** */
-    let bonbonPics = document.querySelectorAll(".product-pics")[0];
-    let rawPics = document.querySelectorAll(".product-pics")[1];
+    let bonbonPics = document.querySelectorAll('.product-pics')[0];
+    let rawPics = document.querySelectorAll('.product-pics')[1];
 
     const options = {
         root: null,
-        rootMargin: "0px",
+        rootMargin: '0px',
         threshold: 0.5,
     };
 
-    const bonbonsBody = document.querySelector(".bonbons-row");
-    const rawBody = document.querySelector(".raw-row");
+    const bonbonsBody = document.querySelector('.bonbons-row');
+    const rawBody = document.querySelector('.raw-row');
 
     const intersectionObserver = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
@@ -62,11 +62,11 @@ window.addEventListener("load", function () {
     }, 3000);
 
     dots.forEach((dot, index) => {
-        dot.addEventListener("click", function (e) {
+        dot.addEventListener('click', function (e) {
             clearDotActive();
             clearInterval(autoPlay);
             curImg = index + 1;
-            e.target.classList.add("dot-active");
+            e.target.classList.add('dot-active');
             sliderImgList.style.left = `${-index * 100}%`;
             autoPlay = setInterval(() => {
                 autoSlider();
@@ -76,7 +76,7 @@ window.addEventListener("load", function () {
 
     function autoSlider() {
         clearDotActive();
-        dots[curImg].classList.add("dot-active");
+        dots[curImg].classList.add('dot-active');
 
         sliderImgList.style.left = `${-curImg * 100}%`;
         curImg++;
@@ -94,12 +94,12 @@ window.addEventListener("load", function () {
             }
         }
 
-        dots = document.querySelectorAll(".dot");
+        dots = document.querySelectorAll('.dot');
     }
 
     function clearDotActive() {
         for (let i = 0; i < dots.length; i++) {
-            dots[i].classList.remove("dot-active");
+            dots[i].classList.remove('dot-active');
         }
     }
 
@@ -109,20 +109,20 @@ window.addEventListener("load", function () {
     } else {
         limit = feedbackCard.length;
     }
-    btnRight.addEventListener("click", function () {
+    btnRight.addEventListener('click', function () {
         if (curFeedback < limit - 1) {
             curFeedback++;
             moveAndCheck(this, btnLeft);
         }
     });
-    btnLeft.addEventListener("click", function () {
+    btnLeft.addEventListener('click', function () {
         if (curFeedback > 0) {
             curFeedback--;
             moveAndCheck(this, btnRight);
         }
     });
 
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
         if (this.window.innerWidth === 768) {
             limit = feedbackCard.length / 3;
             resetArrow();
@@ -136,25 +136,28 @@ window.addEventListener("load", function () {
     function resetArrow() {
         curFeedback = 0;
         feedbackRrow.style.left = `calc(-${curFeedback * 100}%)`;
-        btnRight.style.color = "#431";
-        btnLeft.style.color = "#999";
+        btnRight.style.color = '#431';
+        btnLeft.style.color = '#999';
     }
 
     function moveAndCheck(thisArrow, otherArrow) {
         feedbackRrow.style.left = `calc(-${curFeedback * 100}%)`;
         if (thisArrow === btnRight) {
-            thisArrow.style.color = curFeedback === limit - 1 ? "#999" : "#431";
-            otherArrow.style.color = "#431";
+            thisArrow.style.color = curFeedback === limit - 1 ? '#999' : '#431';
+            otherArrow.style.color = '#431';
         } else {
             console.log(thisArrow);
-            thisArrow.style.color = curFeedback === 0 ? "#999" : "#431";
-            btnRight.style.color = "#431";
+            thisArrow.style.color = curFeedback === 0 ? '#999' : '#431';
+            btnRight.style.color = '#431';
         }
     }
 
     /* ***produts*** */
-    getProductData(
+    /* getProductData(
         "https://learnnodejs-3s6rmmfxwq-de.a.run.app/api/v1/tours/?category=raw&category=bonbons"
+    ); */
+    getProductData(
+        'https://27api.fly.dev/api/v1/tours/?category=raw&category=bonbons'
     );
 
     function getProductData(reqURL) {
@@ -164,11 +167,11 @@ window.addEventListener("load", function () {
         axios.get(reqURL).then(function (res) {
             let { tours } = res.data.dtat;
             let bonbonsArr = tours.filter((choco) => {
-                return choco.category === "bonbons";
+                return choco.category === 'bonbons';
             });
 
             let rawArr = tours.filter((choco) => {
-                return choco.category === "raw";
+                return choco.category === 'raw';
             });
 
             for (let i = 0; i < 4; i++) {
@@ -202,23 +205,23 @@ window.addEventListener("load", function () {
                 sc.getAllCartElement();
 
             btnPlus.forEach((btnPmb, index) => {
-                btnPmb.addEventListener("click", function () {
+                btnPmb.addEventListener('click', function () {
                     let quantity = +inputQuantityMobile[index].value;
                     inputQuantityMobile[index].value = quantity + 1;
                 });
             });
             btnMinus.forEach((btnMmb, index) => {
-                btnMmb.addEventListener("click", function () {
+                btnMmb.addEventListener('click', function () {
                     let quantity = +inputQuantityMobile[index].value;
                     if (quantity === 1) return;
                     inputQuantityMobile[index].value = quantity - 1;
                 });
             });
             btnTocarts.forEach((btnCart, index) => {
-                btnCart.addEventListener("click", function () {
+                btnCart.addEventListener('click', function () {
                     let quantity = +inputQuantityMobile[index].value;
                     sc.addToLocalStorage(tours[index], quantity);
-                    console.log("populated!");
+                    console.log('populated!');
                     console.log(localStorage.length);
                 });
             });
